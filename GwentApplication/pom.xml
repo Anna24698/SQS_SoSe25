@@ -199,6 +199,7 @@
                             <excludes>
                                 <exclude>**/dtos/**</exclude> <!-- TODO mit realen Ordnern ersetzen -->
                                 <exclude>**/constants/**</exclude>
+                                <exclude>**/repository/**</exclude>
                             </excludes>
                         </configuration>
                     </execution>

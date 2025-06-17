@@ -1,4 +1,4 @@
-package com.gwent.gwentapplication.users;
+package com.gwent.gwentapplication.repository;
 
 import com.gwent.gwentapplication.dtos.GwentRoles;
 import org.springframework.data.jpa.repository.JpaRepository;

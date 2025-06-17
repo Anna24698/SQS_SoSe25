@@ -2,9 +2,10 @@ package com.gwent.gwentapplication.cards;
 
 import com.gwent.gwentapplication.dtos.GwentCards;
 import com.gwent.gwentapplication.dtos.GwentDeck;
-import com.gwent.gwentapplication.deck.GwentDeckRepository;
+import com.gwent.gwentapplication.repository.GwentDeckRepository;
 import com.gwent.gwentapplication.dtos.GwentUsers;
-import com.gwent.gwentapplication.users.GwentUsersRepository;
+import com.gwent.gwentapplication.repository.GwentCardsRepository;
+import com.gwent.gwentapplication.repository.GwentUsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

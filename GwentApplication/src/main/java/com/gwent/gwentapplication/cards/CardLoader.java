@@ -3,6 +3,7 @@ package com.gwent.gwentapplication.cards;
 
 import com.google.gson.*;
 import com.gwent.gwentapplication.dtos.GwentCards;
+import com.gwent.gwentapplication.repository.GwentCardsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

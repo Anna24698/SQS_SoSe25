@@ -1,6 +1,6 @@
 import com.gwent.gwentapplication.cards.CardLoader;
 import com.gwent.gwentapplication.dtos.GwentCards;
-import com.gwent.gwentapplication.cards.GwentCardsRepository;
+import com.gwent.gwentapplication.repository.GwentCardsRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

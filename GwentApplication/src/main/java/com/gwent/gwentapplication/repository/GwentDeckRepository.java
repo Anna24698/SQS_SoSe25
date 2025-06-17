@@ -1,4 +1,4 @@
-package com.gwent.gwentapplication.deck;
+package com.gwent.gwentapplication.repository;
 
 import com.gwent.gwentapplication.dtos.GwentDeck;
 import com.gwent.gwentapplication.dtos.GwentUsers;

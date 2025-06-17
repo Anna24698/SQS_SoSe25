@@ -1,4 +1,4 @@
-package com.gwent.gwentapplication.cards;
+package com.gwent.gwentapplication.repository;
 
 import com.gwent.gwentapplication.dtos.GwentCards;
 import org.springframework.data.jpa.repository.JpaRepository;

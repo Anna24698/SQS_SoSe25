@@ -1,6 +1,6 @@
 import com.gwent.gwentapplication.configuration.CustomAuthenticationSuccessHandler;
 import com.gwent.gwentapplication.dtos.GwentUsers;
-import com.gwent.gwentapplication.users.GwentUsersRepository;
+import com.gwent.gwentapplication.repository.GwentUsersRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.junit.jupiter.api.BeforeEach;
