@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deckbau</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<meta name="_csrf" th:content="${_csrf.token}"/>
+<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+<style>
+    .scrollable-box-pool {
+        height: 80vh; /* Browserhöhe */
+        overflow-y: auto;
+    }
+    .scrollable-box-deck {
+        height: 70vh;
+        overflow-y : auto;
+    }
+</style>
+
+<div class="container mt-5 "> <!-- container mt-5-->
+    <div class="row">
+        <!-- Box 1 -->
+        <div class="col-md-5 ">
+            <div class="card scrollable-box-pool">
+                <div class="card-body">
+                    <h5 class="card-title">Kartenpool</h5>
+                    <!-- Hier eine mgl type und reach auszuwählen-->
+                    <div class="d-flex flex-wrap justify-content-around">
+                        <div class="col-md-3" th:each="link, iterStat : ${links}">
+                            <img th:src="@{${link}}" class="img-thumbnail img-fluid selectable-card" alt="Bild"
+                                 th:attr="data-index=${iterStat.index}, data-link=${link}, data-title=${cardnames[iterStat.index]} " />
+                            <p th:text="${cardnames[iterStat.index]}"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Box 2 -->
+        <div class="col-md-2">
+            <div class="card ">
+                <div class="card-body">
+                    <h5 class="card-title">Anführer</h5>
+                    <div th:if="${currentleadercard}" class="row">
+
+                            <img th:src="@{${currentleadercard}}" class="img-thumbnail img-fluid" alt="Leadercard"/>
+                            <p th:text="${currentleadername}"></p>
+
+                    </div>
+                    <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Anführer wählen
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Wähle einen Anführer</h5>
+                                    <button  type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                      <div class="d-flex flex-wrap justify-content-around">
+                                          <div class="col-md-4" th:each="leader, iterStatLeader : ${leaders}">
+                                              <img th:src="@{${leader}}" class="img-thumbnail img-fluid selectable-leader" alt="Bild"
+                                                   th:attr="data-index=${iterStatLeader.index}, data-link=${leader}, data-title=${leadernames[iterStatLeader.index]} " />
+                                              <p th:text="${leadernames[iterStatLeader.index]}"></p>
+                                          </div>
+                                      </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button  type="button"  class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                                    <button id="leaderAuswahl"   class="btn btn-success mt-3">Anführer auswählen</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Box 3 -->
+        <div class="col-md-5">
+            <div class="card scrollable-box-deck">
+                <div class="card-body">
+                    <h5 class="card-title">Deck</h5>
+                    <div id="deck" class="d-flex flex-wrap justify-content-around">
+
+                    </div>
+                    </div>
+                </div>
+            <button id="submitDeck" class="btn btn-success mt-3" sec:authorize="isAuthenticated()">Deck speichern</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    const initialDeck = [[${deck}]];
+    const initialDeckNames = [[${decknames}]];
+</script>
+
+<script> //eigenes Javascript
+    //const initialDeck = /*[[${deck}]]*/ [];
+    const deck = [...initialDeck];
+    let leader = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const cardImages = document.querySelectorAll('.selectable-card');
+        const deckContainer = document.getElementById('deck');
+        const submitButton = document.getElementById('submitDeck');
+        const removableCard = document.querySelectorAll('.removable-card');
+        const leaderCard = document.querySelectorAll('.selectable-leader');
+        const leaderButton = document.getElementById('leaderAuswahl');
+        const csrfToken = document.querySelector('meta[name="_csrf"]').getAttribute('content');
+        const csrfHeader = document.querySelector('meta[name="_csrf_header"]').getAttribute('content');
+
+        cardImages.forEach(img => {
+            img.addEventListener('click', () => {
+                const link = img.getAttribute('data-link');
+                const titel = img.getAttribute('data-title');
+
+
+                // Optional: Prüfen, ob Karte schon im Deck ist
+               // if (!deck.includes(link)) {
+                    deck.push(link);
+
+                    const newImg = document.createElement('img');
+                    newImg.src = link;
+                    newImg.title = titel;
+                    newImg.className = 'img-thumbnail img-fluid removable-card';
+                    newImg.style.width = '150px';
+
+                    const caption = document.createElement('p');
+                    caption.textContent = titel;
+
+                    const newContainer = document.createElement('div');
+                    newContainer.className = 'col-md-3';
+                    newContainer.appendChild(newImg);
+                    newContainer.appendChild(caption);
+
+                    document.getElementById('deck').appendChild(newContainer);
+               // }
+            });
+        });
+        initialDeck.forEach((link, index) => {
+
+            const newImg = document.createElement('img');
+            newImg.src = link;
+            newImg.title = initialDeckNames[index];
+            newImg.className = 'img-thumbnail img-fluid removable-card';
+            newImg.style.width = '150px';
+
+            const caption = document.createElement('p');
+            caption.textContent = newImg.title;
+
+            const newContainer = document.createElement('div');
+            newContainer.className = 'col-md-3';
+            newContainer.appendChild(newImg);
+            newContainer.appendChild(caption);
+
+            document.getElementById('deck').appendChild(newContainer);
+        });
+
+        leaderCard.forEach(leadercard => {
+            leadercard.addEventListener('click', () => {
+                leader = leadercard.getAttribute('src').slice(15);
+            });
+        });
+        leaderButton.addEventListener('click', () => {
+            if (leader){
+                window.location.href = "/buildDeck?leaderId=" + leader;
+            }
+        });
+        deckContainer.addEventListener('click', function (event) {
+            if (event.target.tagName === 'IMG') {
+                const card = event.target.closest('.removable-card');
+
+                const index = deck.indexOf(card.getAttribute("src").toString());
+                if (index !== -1){
+                    deck.splice(index, 1);
+                }
+                const parent = card.parentElement;
+                if (parent) {
+                    parent.innerHTML = '';
+                    parent.remove();
+                }
+            }
+        });
+        submitButton.addEventListener('click', () => {
+            if (!csrfToken || !csrfHeader) {
+                alert("CSRF token or header not found in meta tags.");
+            }
+
+            let params = new URL(document.location.toString()).searchParams;
+            let leaderid = params.get("leaderId");
+            let posturl;
+            if (leaderid != null){
+            posturl = '/submit-deck?leaderId=' + leaderid;}
+            else { posturl = '/submit-deck'}
+            fetch(posturl, {
+                method: 'POST',
+                credentials: 'same-origin',
+                headers: {
+                    'Content-Type': 'application/json',
+                    [csrfHeader]: csrfToken
+                },
+                body: JSON.stringify(deck)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Deck erfolgreich gespeichert!');
+                    } else {
+                        alert('Fehler beim Speichern des Decks.' && response.status);
+                    }
+                });
+        });
+    });
+</script>
+<!-- Bootstrap JS (mit Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

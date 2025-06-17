@@ -1,0 +1,20 @@
+package com.gwent.gwentapplication.deck;
+
+import com.gwent.gwentapplication.cards.GwentCards;
+import com.gwent.gwentapplication.users.GwentUsers;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
+
+public interface GwentDeckRepository extends JpaRepository<GwentDeck, Long> {
+
+
+    List<GwentDeck> findGwentDecksByUserId(GwentUsers userId);
+
+
+    //void deleteGwentDeckByUserId(GwentUsers userId);
+
+    @Query("SELECT MAX(u.id) FROM GwentDeck u")
+    Long findMaxId();
+}
