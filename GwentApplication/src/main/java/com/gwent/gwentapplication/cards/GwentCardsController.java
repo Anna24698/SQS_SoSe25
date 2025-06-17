@@ -42,7 +42,6 @@ public class GwentCardsController {
     private CardLoader cardLoader;
     @GetMapping("/buildDeck")
     public String zeigeDeckbauseite(@RequestParam(name = "leaderId", required = false) Optional<Long> leaderId,
-                                    //@RequestParam(name = "userId", required = false) Optional<Long> userId,
                                     Model model) {
 
        GwentCards[] cards = gwentCardsRepository.findGwentCardsByAttributeFaction("Neutral").toArray(GwentCards[]::new);
@@ -64,8 +63,6 @@ public class GwentCardsController {
             model.addAttribute("currentleadercard", "/buildDeck2?id=" + leader.getCardId() );
             model.addAttribute("currentleadername", leader.getCardName());
         }
-
-
         model.addAttribute("links", links.toArray());
         model.addAttribute("cardnames", cardnames.toArray());
 
@@ -82,11 +79,8 @@ public class GwentCardsController {
         List<String> decklinks = new ArrayList<>();
         List<String> decknames = new ArrayList<>();
 
-
-        //if (userId.isPresent() ){
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             Object principal = authentication.getPrincipal();
-            //String user = principal.toString();
         if(!Objects.equals(principal.toString(), "anonymousUser")){
             UserDetails userDetails = (UserDetails) principal;
             String username = userDetails.getUsername();
@@ -95,9 +89,7 @@ public class GwentCardsController {
                 GwentDeck[] decklines = gwentDeckRepository.findGwentDecksByUserId(user).toArray(GwentDeck[]::new);
                 List<Long> cardIds = new ArrayList<>();
                 for (GwentDeck deckline : decklines){
-
                         cardIds.add(deckline.getCardId().getCardId());
-
                 }
                 GwentCards[] deckcards = gwentCardsRepository.findGwentCardsByCardIdIn(cardIds).toArray(GwentCards[]::new);
 
@@ -105,7 +97,6 @@ public class GwentCardsController {
                     if (card.getCardCategory().equals("Leader") &&  leaderId.isEmpty()){
                         return "redirect:/buildDeck?leaderId="+card.getCardId(); //TODO besser Positionieren
                     } else if (!card.getCardCategory().equals("Leader")){
-
                         decklinks.add("/buildDeck2?id=" + card.getCardId());
                         decknames.add(card.getCardName());
                     }

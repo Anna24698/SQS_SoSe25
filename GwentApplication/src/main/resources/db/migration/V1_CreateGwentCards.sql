@@ -1,4 +1,4 @@
-use GwentDB;
+/*use GwentDB;
 
 drop table  IF EXISTS gwent_cards;
 
@@ -17,4 +17,4 @@ CREATE TABLE IF NOT EXISTS  gwent_cards(
                                            cardCategory VARCHAR(255),
                                            cardAbility VARCHAR(255),
                                            cardKeyword VARCHAR(1000)
-);
+);*/
