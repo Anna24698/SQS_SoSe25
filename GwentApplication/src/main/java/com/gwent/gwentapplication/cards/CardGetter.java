@@ -1,18 +1,5 @@
 package com.gwent.gwentapplication.cards;
 
-import com.gwent.gwentapplication.deck.GwentDeck;
-import com.gwent.gwentapplication.deck.GwentDeckRepository;
-import com.gwent.gwentapplication.users.GwentUsers;
-import com.gwent.gwentapplication.users.GwentUsersRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 /*
 @Component
 public class CardGetter {

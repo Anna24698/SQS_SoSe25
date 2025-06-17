@@ -2,21 +2,19 @@
 
 
 import com.gwent.gwentapplication.cards.CardLoader;
-import com.gwent.gwentapplication.cards.GwentCards;
+import com.gwent.gwentapplication.dtos.GwentCards;
 import com.gwent.gwentapplication.cards.GwentCardsController;
 import com.gwent.gwentapplication.cards.GwentCardsRepository;
 import com.gwent.gwentapplication.deck.GwentDeckRepository;
-import com.gwent.gwentapplication.users.GwentUsers;
+import com.gwent.gwentapplication.dtos.GwentUsers;
 import com.gwent.gwentapplication.users.GwentUsersRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
-import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;

@@ -3,6 +3,7 @@ package com.gwent.gwentapplication.users;
 
 
 
+import com.gwent.gwentapplication.dtos.GwentUsers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

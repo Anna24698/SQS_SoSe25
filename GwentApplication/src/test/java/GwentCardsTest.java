@@ -1,4 +1,4 @@
-import com.gwent.gwentapplication.cards.GwentCards;
+import com.gwent.gwentapplication.dtos.GwentCards;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

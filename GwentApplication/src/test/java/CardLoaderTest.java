@@ -1,6 +1,5 @@
-import com.google.gson.JsonObject;
 import com.gwent.gwentapplication.cards.CardLoader;
-import com.gwent.gwentapplication.cards.GwentCards;
+import com.gwent.gwentapplication.dtos.GwentCards;
 import com.gwent.gwentapplication.cards.GwentCardsRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

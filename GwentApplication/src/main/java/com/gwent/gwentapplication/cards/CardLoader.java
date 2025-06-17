@@ -2,6 +2,7 @@ package com.gwent.gwentapplication.cards;
 
 
 import com.google.gson.*;
+import com.gwent.gwentapplication.dtos.GwentCards;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +15,7 @@ import java.net.http.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.gwent.gwentapplication.cards.CardConstants.*;
+import static com.gwent.gwentapplication.constants.CardConstants.*;
 import static java.lang.Long.parseLong;
 
 @Component

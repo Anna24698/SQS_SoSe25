@@ -44,6 +44,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.gwent.gwentapplication.dtos" />
+      <recent name="com.gwent.gwentapplication.constants" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="SQS_SoSe25" />
@@ -80,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750148251121</updated>
-      <workItem from="1750148252719" duration="5313000" />
+      <workItem from="1750148252719" duration="8726000" />
     </task>
     <servers />
   </component>

@@ -13,7 +13,7 @@ Ordner:
 -README.md (nicht nötig für readthedocs aber für gutes Repo)
 
 
-
+TODO: Rechtliches
 
 -->
 
