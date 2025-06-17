@@ -18,9 +18,11 @@ jobs:
           java-version: '17'
 
       - name: Build project with Maven
+        working-directory: GwentApplication
         run: mvn clean compile
 
       - name: Run tests and generate JaCoCo report
+        working-directory: GwentApplication
         run: mvn verify
 
       - name: Download Codacy Coverage Reporter
