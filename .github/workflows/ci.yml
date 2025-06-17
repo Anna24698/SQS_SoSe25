@@ -2,3 +2,33 @@ name: CI-Pipeline
 
 on:
   push:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build project with Maven
+        run: mvn clean compile
+
+      - name: Run tests and generate JaCoCo report
+        run: mvn verify
+
+      - name: Download Codacy Coverage Reporter
+        run: |
+          curl -Ls https://coverage.codacy.com/get.sh | bash
+
+      - name: Upload coverage report to Codacy
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_SECRET_TOKEN }}
+        run: |
+          ./codacy-coverage-reporter report -l Java -r target/site/jacoco/jacoco.xml
