@@ -37,9 +37,15 @@ jobs:
             https://github.com/codacy/codacy-coverage-reporter/releases/latest/download/codacy-coverage-reporter-linux
           chmod +x codacy-coverage-reporter
 
-      - name: Upload coverage report to Codacy
-        env:
-          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
-        run: |
-          ./codacy-coverage-reporter report -l Java -r target/site/jacoco/jacoco.xml
-          
+     # - name: Upload coverage report to Codacy
+     #   env:
+     #     CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+     #   run: |
+     #     ./codacy-coverage-reporter report -l Java -r target/site/jacoco/jacoco.xml
+
+      - name: Run codacy-coverage-reporter
+        uses: |
+          codacy/codacy-coverage-reporter-action@v1.3.0
+        with:
+          project-token: ${{ secrets.CODACY }}
+          coverage-reports: GwentApplication/build/reports/jacoco/test/jacocoTestReport.xml
