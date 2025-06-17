@@ -21,6 +21,12 @@ jobs:
         working-directory: GwentApplication
         run: mvn clean compile
 
+      - name: Echo token length
+        run: |
+          echo "Token length: ${#CODACY_PROJECT_TOKEN}"
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+
       - name: Run tests and generate JaCoCo report
         working-directory: GwentApplication
         run: mvn verify
