@@ -1,10 +1,55 @@
+##name: CI-Pipeline
+#
+#on:
+#  push:
+#
+#jobs:
+#  build-and-test:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+
+#      - name: Set up Java
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'temurin'
+#          java-version: '21'
+
+#      - name: Build project with Maven
+#        working-directory: GwentApplication
+#        run: mvn clean compile
+
+#      - name: Echo token length
+#        run: |
+#          echo "Token length: ${#CODACY_PROJECT_TOKEN}"
+#        env:
+#          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+
+#      - name: Run tests and generate JaCoCo report
+#        working-directory: GwentApplication
+#        run: mvn verify
+
+#      - name: Download latest Codacy Coverage Reporter
+#        run: |
+#          curl -L -o codacy-coverage-reporter \
+#            https://github.com/codacy/codacy-coverage-reporter/releases/latest/download/codacy-coverage-reporter-linux
+#          chmod +x codacy-coverage-reporter
+
+#      - name: Upload coverage report to Codacy
+#        env:
+#          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+#        run: |
+#         ./codacy-coverage-reporter report -l Java -r GwentApplication/target/site/jacoco/jacoco.xml
+
 name: CI-Pipeline
 
 on:
   push:
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,15 +66,55 @@ jobs:
         working-directory: GwentApplication
         run: mvn clean compile
 
-      - name: Echo token length
-        run: |
-          echo "Token length: ${#CODACY_PROJECT_TOKEN}"
-        env:
-          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+      - name: Upload compiled target directory
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-code
+          path: GwentApplication/target
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Restore compiled target
+        uses: actions/download-artifact@v4
+        with:
+          name: compiled-code
+          path: GwentApplication/target
 
       - name: Run tests and generate JaCoCo report
         working-directory: GwentApplication
         run: mvn verify
+
+      - name: Upload JaCoCo report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: GwentApplication/target/site/jacoco/jacoco.xml
+
+  codacy-coverage:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Download JaCoCo report
+        uses: actions/download-artifact@v4
+        with:
+          name: jacoco-report
+          path: GwentApplication/target/site/jacoco/
 
       - name: Download latest Codacy Coverage Reporter
         run: |
@@ -41,6 +126,4 @@ jobs:
         env:
           CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
         run: |
-         ./codacy-coverage-reporter report -l Java -r GwentApplication/target/site/jacoco/jacoco.xml
-     #          ./codacy-coverage-reporter report -l Java -r target/build/reports/jacoco/test/jacocoTestReport.xml
-
+          ./codacy-coverage-reporter report -l Java -r GwentApplication/target/site/jacoco/jacoco.xml
