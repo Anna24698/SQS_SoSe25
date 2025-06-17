@@ -1,4 +1,21 @@
 # 
+<!-- 5Cs Clarity Concise Consistent Complete Correct
+
+ADRs (arc42 - Verstoßen bewusst gegen best. => TODO reevaluate in 6Monaten)
+in ReadTheDocs
+TODO-Liste: Feature-Requests und geplantes
+Ordner:
+-docs
+    -conf.py
+    - index.rst (oder .txt)
+-requirements.txt
+-readthedocs.yaml
+-README.md (nicht nötig für readthedocs aber für gutes Repo)
+
+
+
+
+-->
 
 **Über arc42**
 
