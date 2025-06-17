@@ -2,7 +2,7 @@ site_name: GwentApp - Dokumentation
 docs_dir: pages
 nav:
   - Start: index.md
-  - Einführung: einführung.md
+  - Einführung: einfuhrung.md
 theme:
   name: material
   palette:
