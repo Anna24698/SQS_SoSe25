@@ -1,6 +1,6 @@
 package com.gwent.gwentapplication.repository;
 
-import com.gwent.gwentapplication.dtos.GwentCards;
+import com.gwent.gwentapplication.entities.GwentCards;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

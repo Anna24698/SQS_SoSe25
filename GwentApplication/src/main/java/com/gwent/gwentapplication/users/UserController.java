@@ -1,8 +1,8 @@
 package com.gwent.gwentapplication.users;
 
 
-import com.gwent.gwentapplication.dtos.GwentRoles;
-import com.gwent.gwentapplication.dtos.GwentUsers;
+import com.gwent.gwentapplication.entities.GwentRoles;
+import com.gwent.gwentapplication.entities.GwentUsers;
 import com.gwent.gwentapplication.repository.GwentUsersRepository;
 import com.gwent.gwentapplication.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;

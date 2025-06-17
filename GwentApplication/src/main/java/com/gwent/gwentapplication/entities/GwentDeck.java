@@ -1,4 +1,4 @@
-package com.gwent.gwentapplication.dtos;
+package com.gwent.gwentapplication.entities;
 
 import jakarta.persistence.*;
 

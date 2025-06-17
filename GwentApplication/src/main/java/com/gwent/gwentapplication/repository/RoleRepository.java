@@ -1,6 +1,6 @@
 package com.gwent.gwentapplication.repository;
 
-import com.gwent.gwentapplication.dtos.GwentRoles;
+import com.gwent.gwentapplication.entities.GwentRoles;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
 import com.gwent.gwentapplication.configuration.CustomUserDetailsService;
-import com.gwent.gwentapplication.dtos.GwentRoles;
-import com.gwent.gwentapplication.dtos.GwentUsers;
+import com.gwent.gwentapplication.entities.GwentRoles;
+import com.gwent.gwentapplication.entities.GwentUsers;
 import com.gwent.gwentapplication.repository.GwentUsersRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

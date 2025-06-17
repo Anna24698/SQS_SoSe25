@@ -1,6 +1,6 @@
-import com.gwent.gwentapplication.dtos.GwentDeck;
-import com.gwent.gwentapplication.dtos.GwentCards;
-import com.gwent.gwentapplication.dtos.GwentUsers;
+import com.gwent.gwentapplication.entities.GwentDeck;
+import com.gwent.gwentapplication.entities.GwentCards;
+import com.gwent.gwentapplication.entities.GwentUsers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

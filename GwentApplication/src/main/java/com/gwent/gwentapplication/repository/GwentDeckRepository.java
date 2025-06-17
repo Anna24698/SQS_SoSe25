@@ -1,7 +1,7 @@
 package com.gwent.gwentapplication.repository;
 
-import com.gwent.gwentapplication.dtos.GwentDeck;
-import com.gwent.gwentapplication.dtos.GwentUsers;
+import com.gwent.gwentapplication.entities.GwentDeck;
+import com.gwent.gwentapplication.entities.GwentUsers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

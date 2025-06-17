@@ -1,5 +1,5 @@
 import com.gwent.gwentapplication.configuration.CustomAuthenticationSuccessHandler;
-import com.gwent.gwentapplication.dtos.GwentUsers;
+import com.gwent.gwentapplication.entities.GwentUsers;
 import com.gwent.gwentapplication.repository.GwentUsersRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

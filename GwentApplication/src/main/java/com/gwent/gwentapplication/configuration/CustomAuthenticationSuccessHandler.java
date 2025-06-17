@@ -1,7 +1,7 @@
 package com.gwent.gwentapplication.configuration;
 
 
-import com.gwent.gwentapplication.dtos.GwentUsers;
+import com.gwent.gwentapplication.entities.GwentUsers;
 import com.gwent.gwentapplication.repository.GwentUsersRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

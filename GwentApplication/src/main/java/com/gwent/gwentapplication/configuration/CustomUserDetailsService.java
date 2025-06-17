@@ -1,7 +1,7 @@
 package com.gwent.gwentapplication.configuration;
 
-import com.gwent.gwentapplication.dtos.GwentRoles;
-import com.gwent.gwentapplication.dtos.GwentUsers;
+import com.gwent.gwentapplication.entities.GwentRoles;
+import com.gwent.gwentapplication.entities.GwentUsers;
 import com.gwent.gwentapplication.repository.GwentUsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
