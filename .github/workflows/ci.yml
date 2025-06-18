@@ -66,11 +66,15 @@ jobs:
         working-directory: GwentApplication
         run: mvn clean compile
 
+
       - name: Upload compiled target directory
         uses: actions/upload-artifact@v4
         with:
           name: compiled-code
           path: GwentApplication/target
+
+      - name: Correct Profile
+        run: mvn verify -Pci
 
  # start-db:
  #   runs-on: ubuntu-latest
@@ -103,7 +107,7 @@ jobs:
           - 3306:3306
         options: >-
           --health-cmd="mysqladmin ping -h 127.0.0.1 -u root --password=root"
-          --health-interval=15s
+          --health-interval=10s
           --health-timeout=10s
           --health-retries=20
 
