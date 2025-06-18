@@ -95,16 +95,16 @@ jobs:
     needs: build
     services:
       mariadb:
-        image: mariadb:latest
+        image: mariadb:11.8
         env:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: GwentDB
         ports:
           - 3306:3306
         options: >-
-          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
-          --health-interval=10s
-          --health-timeout=5s
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -u root --password=root"
+          --health-interval=15s
+          --health-timeout=10s
           --health-retries=20
 
     steps:
