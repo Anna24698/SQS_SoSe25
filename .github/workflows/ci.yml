@@ -86,7 +86,7 @@ jobs:
       - name: Start MariaDB via Docker Compose
         working-directory: GwentApplication
         run: |
-          docker-compose up -d mariadb
+          docker compose up -d mariadb
           echo "Waiting for MariaDB to initialize..."
           sleep 20  # optional, replace with proper healthcheck if needed
 
