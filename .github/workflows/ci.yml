@@ -103,7 +103,7 @@ jobs:
           name: compiled-code
           path: GwentApplication/target
 
-      
+
 
 
       - name:
