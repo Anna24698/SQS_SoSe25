@@ -69,7 +69,7 @@
       <recent name="com.gwent.gwentapplication.constants" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTest">
+  <component name="RunManager" selected="JUnit.SecurityConfigurationWebTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="SQS_SoSe25" />
       <working_directory value="$PROJECT_DIR$" />
@@ -146,10 +146,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SecurityConfigurationWebTest" />
         <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.UserControllerTest.shouldFailIfUserAlreadyExists" />
         <item itemvalue="JUnit.UserControllerTest.shouldRegisterUserSuccessfully" />
-        <item itemvalue="JUnit.SecurityConfigurationWebTest" />
         <item itemvalue="JUnit.SecurityConfigurationWebTest.testProtectedPostEndpointAccessibleWithAuth" />
       </list>
     </recent_temporary>
@@ -163,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750148251121</updated>
       <workItem from="1750148252719" duration="14395000" />
-      <workItem from="1750234973807" duration="12402000" />
+      <workItem from="1750234973807" duration="14056000" />
     </task>
     <servers />
   </component>
@@ -205,6 +205,7 @@
     <SUITE FILE_PATH="coverage/SQS_SoSe25$CardLoaderTest_testMergeImages_resizesImageWhenSizeDiffers.ic" NAME="CardLoaderTest.testMergeImages_resizesImageWhenSizeDiffers Coverage Results" MODIFIED="1750238392315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$CustomAuthenticationSuccessHandlerTest.ic" NAME="CustomAuthenticationSuccessHandlerTest Coverage Results" MODIFIED="1750235243479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$UserControllerTest_shouldDisplayRegisterForm.ic" NAME="UserControllerTest.shouldDisplayRegisterForm Coverage Results" MODIFIED="1750163367571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SQS_SoSe25$UserControllerTest.ic" NAME="UserControllerTest Coverage Results" MODIFIED="1750248994231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentDeckTest.ic" NAME="GwentDeckTest Coverage Results" MODIFIED="1750235361750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$CustomUserDetailsServiceTest.ic" NAME="CustomUserDetailsServiceTest Coverage Results" MODIFIED="1750235294062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentCardsTest.ic" NAME="GwentCardsTest Coverage Results" MODIFIED="1750235347445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
