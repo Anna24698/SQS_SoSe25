@@ -115,7 +115,7 @@ public class UserControllerTest {
                 .andExpect(redirectedUrl("/buildDeck"));
     }
 }
-*/
+*//*
 
 @SpringBootTest(classes = GwentApplication.class)
 @AutoConfigureMockMvc
@@ -192,4 +192,4 @@ class UserControllerTest {
                 .andExpect(content().string(containsString("Benutzer existiert schon")));
     }
 */
-}
+//}

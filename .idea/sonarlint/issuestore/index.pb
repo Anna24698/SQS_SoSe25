@@ -25,8 +25,6 @@ H
 GwentApplication/pom.xml,a\5\a5dcc5d8c0df53ccacf413b6cddfadafc97f6a98
 Ž
 ^GwentApplication/src/main/java/com/gwent/gwentapplication/repository/GwentCardsRepository.java,0\9\0953be01ddc240b288aa700d92c06596d16331eb
-f
-6GwentApplication/src/test/java/UserControllerTest.java,e\b\eb5ae694ab2b3babe8995964d6594e659cd72aca
 ’
 bGwentApplication/src/main/java/com/gwent/gwentapplication/configuration/SecurityConfiguration.java,7\e\7ea0158173aa23557c652481ca6b2a5e3239e807
 †

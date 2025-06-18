@@ -158,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750148251121</updated>
       <workItem from="1750148252719" duration="14395000" />
-      <workItem from="1750234973807" duration="1048000" />
+      <workItem from="1750234973807" duration="1398000" />
     </task>
     <servers />
   </component>
@@ -180,7 +180,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentCardsControllerTest.ic" NAME="GwentCardsControllerTest Coverage Results" MODIFIED="1750235321948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentCardsControllerTest.ic" NAME="GwentCardsControllerTest Coverage Results" MODIFIED="1750236133274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$CustomAuthenticationSuccessHandlerTest.ic" NAME="CustomAuthenticationSuccessHandlerTest Coverage Results" MODIFIED="1750235243479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$UserControllerTest_shouldDisplayRegisterForm.ic" NAME="UserControllerTest.shouldDisplayRegisterForm Coverage Results" MODIFIED="1750163367571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentDeckTest.ic" NAME="GwentDeckTest Coverage Results" MODIFIED="1750235361750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
