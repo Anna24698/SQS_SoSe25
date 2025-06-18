@@ -102,7 +102,7 @@ jobs:
         ports:
           - 3306:3306
         options: >-
-          --health-cmd="mysqladmin ping --silent"
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=5
@@ -128,8 +128,14 @@ jobs:
       - name:
           Wait for DB to be ready
         run: |
-          echo "Waiting for DB to be ready..."
-          sleep 20  # optional, if healthcheck is reliable, can be skipped
+          for i in {1..30}; do
+            if mysqladmin ping -h 127.0.0.1 -uroot -proot --silent; then
+              echo "MariaDB is ready!"
+              break
+            fi
+            echo "Waiting for MariaDB..."
+            sleep 2
+          done
 
       - name: Run tests and generate JaCoCo report
         working-directory: GwentApplication
