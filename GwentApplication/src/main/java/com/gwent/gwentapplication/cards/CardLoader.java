@@ -30,7 +30,7 @@ public class CardLoader {
        url =  "https://api.gwent.one/?key=data&version=3.0.0";
     }
 //Lade die Kartendaten in DB
-    @PostConstruct //@TODO vor produktivsetzung wieder einkommentieren
+    //@PostConstruct //@TODO vor produktivsetzung wieder einkommentieren
     public void loadCardData() throws Exception {
 
 

@@ -72,7 +72,7 @@
       <recent name="com.gwent.gwentapplication.constants" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GwentApplication">
+  <component name="RunManager" selected="JUnit.SecurityConfigurationWebTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="SQS_SoSe25" />
       <working_directory value="$PROJECT_DIR$" />
@@ -151,8 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.GwentApplication/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="JUnit.SecurityConfigurationWebTest" />
+        <item itemvalue="Docker.GwentApplication/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.UserControllerTest.shouldFailIfUserAlreadyExists" />
         <item itemvalue="JUnit.UserControllerTest.shouldRegisterUserSuccessfully" />
@@ -168,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750148251121</updated>
       <workItem from="1750148252719" duration="14395000" />
-      <workItem from="1750234973807" duration="24546000" />
+      <workItem from="1750234973807" duration="25307000" />
     </task>
     <servers />
   </component>
@@ -190,11 +190,6 @@
           <url>file://$PROJECT_DIR$/GwentApplication/src/test/java/UnitTests/CardLoaderTest.java</url>
           <line>209</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/GwentApplication/src/test/java/IntegrationTests/SecurityConfigurationWebTest.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

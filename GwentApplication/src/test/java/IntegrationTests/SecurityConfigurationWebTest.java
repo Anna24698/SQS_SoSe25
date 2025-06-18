@@ -13,8 +13,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -31,14 +34,22 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 //@ContextConfiguration(classes = GwentApplication.class)
 //@SpringBootTest(classes = SecurityConfiguration.class)
+@ActiveProfiles("ci")
 
 public class SecurityConfigurationWebTest {
     @Autowired
     private MockMvc mockMvc;
 
-    // Wird benötigt, weil dein SecurityConfig einen CustomAuthenticationSuccessHandler verwendet
     @MockBean
     private CustomAuthenticationSuccessHandler successHandler;
+
+    @MockBean
+    private UserDetailsService userDetailsService;
+
+    @MockBean
+    private PasswordEncoder passwordEncoder;
+
+    // Wird benötigt, weil dein SecurityConfig einen CustomAuthenticationSuccessHandler verwendet
 
     @Test
     void testPublicEndpointsAccessibleWithoutAuthentication() throws Exception {
