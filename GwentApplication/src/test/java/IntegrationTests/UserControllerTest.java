@@ -1,3 +1,5 @@
+package IntegrationTests;
+
 import com.gwent.gwentapplication.GwentApplication;
 import com.gwent.gwentapplication.entities.GwentRoles;
 import com.gwent.gwentapplication.entities.GwentUsers;

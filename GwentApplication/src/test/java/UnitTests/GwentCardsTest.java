@@ -1,3 +1,5 @@
+package UnitTests;
+
 import com.gwent.gwentapplication.entities.GwentCards;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

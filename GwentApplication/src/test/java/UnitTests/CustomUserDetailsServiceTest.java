@@ -1,3 +1,5 @@
+package UnitTests;
+
 import com.gwent.gwentapplication.configuration.CustomUserDetailsService;
 import com.gwent.gwentapplication.entities.GwentRoles;
 import com.gwent.gwentapplication.entities.GwentUsers;

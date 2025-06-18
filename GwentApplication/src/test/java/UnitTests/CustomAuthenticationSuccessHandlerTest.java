@@ -1,3 +1,5 @@
+package UnitTests;
+
 import com.gwent.gwentapplication.configuration.CustomAuthenticationSuccessHandler;
 import com.gwent.gwentapplication.entities.GwentUsers;
 import com.gwent.gwentapplication.repository.GwentUsersRepository;

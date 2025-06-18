@@ -1,3 +1,5 @@
+package UnitTests;
+
 import com.gwent.gwentapplication.cards.CardLoader;
 import com.gwent.gwentapplication.entities.GwentCards;
 import com.gwent.gwentapplication.repository.GwentCardsRepository;

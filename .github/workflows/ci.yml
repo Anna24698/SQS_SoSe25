@@ -73,8 +73,7 @@ jobs:
           name: compiled-code
           path: GwentApplication/target
 
-      - name: Correct Profile
-        run: mvn verify -Pci
+
 
  # start-db:
  #   runs-on: ubuntu-latest
@@ -127,6 +126,8 @@ jobs:
           name: compiled-code
           path: GwentApplication/target
 
+      - name: Correct Profile
+        run: mvn verify -Pci
 
 
       - name:

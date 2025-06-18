@@ -1,3 +1,4 @@
+package IntegrationTests;
 
 import com.gwent.gwentapplication.GwentApplication;
 import com.gwent.gwentapplication.cards.GwentCardsController;

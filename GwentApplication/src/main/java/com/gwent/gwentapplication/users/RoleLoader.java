@@ -29,10 +29,6 @@ public class RoleLoader {
             List<GwentRoles> duplicates = roles.subList(1, roles.size()); // rest löschen
             roleRepository.deleteAll(duplicates);
         }
-       /* if (!roleRepository.findByName("USER").isPresent()){
-            GwentRoles role = new GwentRoles();
-            role.setName("USER");
-            roleRepository.save(role);
-        }*/
+
     }
 }
