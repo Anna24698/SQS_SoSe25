@@ -4,6 +4,7 @@
 import com.gwent.gwentapplication.cards.CardLoader;
 import com.gwent.gwentapplication.entities.GwentCards;
 import com.gwent.gwentapplication.cards.GwentCardsController;
+import com.gwent.gwentapplication.entities.GwentDeck;
 import com.gwent.gwentapplication.repository.GwentCardsRepository;
 import com.gwent.gwentapplication.repository.GwentDeckRepository;
 import com.gwent.gwentapplication.entities.GwentUsers;
@@ -86,7 +87,85 @@ public class GwentCardsControllerTest {
         verify(model).addAttribute(eq("decknames"), any());
     }
 
-  /*  @Test
+    @Test
+    void testZeigeDeckbauseite_withLeaderId_andAnonymousUser() {
+        // Setup leader
+        Long leaderIdValue = 10L;
+        GwentCards leader = createCard(leaderIdValue, "Leader", "Scoiatael", "TypeLeader", "Leader");
+
+        // Mock SecurityContext
+        when(authentication.getPrincipal()).thenReturn("anonymousUser");
+
+        // Mock DB returns
+        when(gwentCardsRepository.getReferenceById(leaderIdValue)).thenReturn(leader);
+        when(gwentCardsRepository.findGwentCardsByAttributeFaction("Scoiatael"))
+                .thenReturn(Collections.singletonList(createCard(20L, "Card1", "Scoiatael", "Type1", "Normal")));
+        when(gwentCardsRepository.findGwentCardsByAttributeFaction("Neutral"))
+                .thenReturn(Collections.singletonList(createCard(99L, "NeutralCard", "Neutral", "TypeNeutral", "Normal")));
+        when(gwentCardsRepository.findGwentCardsByCardCategory("Leader"))
+                .thenReturn(Collections.singletonList(leader));
+
+        // Call controller method
+        String viewName = controller.zeigeDeckbauseite(Optional.of(leaderIdValue), model);
+
+        // Assertions
+        assertThat(viewName).isEqualTo("buildDeck");
+
+        // Verify model attributes for leader context
+        verify(model).addAttribute("currentleadercard", "/buildDeck2?id=10");
+        verify(model).addAttribute("currentleadername", "Leader");
+
+        // Verify common attributes
+        verify(model).addAttribute(eq("links"), any());
+        verify(model).addAttribute(eq("cardnames"), any());
+        verify(model).addAttribute(eq("leaders"), any());
+        verify(model).addAttribute(eq("leadernames"), any());
+        verify(model).addAttribute(eq("deck"), any());
+        verify(model).addAttribute(eq("decknames"), any());
+    }
+
+    @Test
+    void testZeigeDeckbauseite_withoutLeaderId_andAuthenticatedUser() {
+        // Setup
+        when(authentication.getPrincipal()).thenReturn(userDetails);
+        when(userDetails.getUsername()).thenReturn("user");
+
+        GwentUsers user = new GwentUsers();
+        when(gwentUsersRepository.findByUsername("user")).thenReturn(Optional.of(user));
+
+        GwentCards neutralCard = createCard(1L, "NeutralCard", "Neutral", "Type1", "Normal");
+        when(gwentCardsRepository.findGwentCardsByAttributeFaction("Neutral"))
+                .thenReturn(Collections.singletonList(neutralCard));
+
+        GwentCards leaderCard = createCard(10L, "LeaderCard", "Northern", "TypeLeader", "Leader");
+        when(gwentCardsRepository.findGwentCardsByCardCategory("Leader"))
+                .thenReturn(Collections.singletonList(leaderCard));
+
+        GwentCards deckCard = createCard(2L, "DeckCard", "Neutral", "Type2", "Normal");
+        GwentDeck deckEntry = new GwentDeck();
+        deckEntry.setCardId(deckCard);
+        deckEntry.setUserID(user);
+        when(gwentDeckRepository.findGwentDecksByUserId(user))
+                .thenReturn(Collections.singletonList(deckEntry));
+
+        when(gwentCardsRepository.findGwentCardsByCardIdIn(List.of(2L)))
+                .thenReturn(Collections.singletonList(deckCard));
+
+        // Call the method under test
+        String viewName = controller.zeigeDeckbauseite(Optional.empty(), model);
+
+        // Verify
+        assertThat(viewName).isEqualTo("buildDeck");
+
+        verify(model).addAttribute(eq("links"), any());
+        verify(model).addAttribute(eq("cardnames"), any());
+        verify(model).addAttribute(eq("leaders"), any());
+        verify(model).addAttribute(eq("leadernames"), any());
+        verify(model).addAttribute(eq("deck"), any());
+        verify(model).addAttribute(eq("decknames"), any());
+    }
+/*
+    @Test
     void testZeigeDeckbauseite_withLeaderId_andAuthenticatedUser() {
         when(authentication.getPrincipal()).thenReturn(userDetails);
         when(userDetails.getUsername()).thenReturn("user");
@@ -115,8 +194,8 @@ public class GwentCardsControllerTest {
         verify(model).addAttribute(eq("leadernames"), any());
         verify(model).addAttribute(eq("deck"), any());
         verify(model).addAttribute(eq("decknames"), any());
-    }*/
-
+    }
+*/
     @Test
     void testGetCompositeImage_success() throws IOException {
         List<String> urls = Arrays.asList("url1", "url2");

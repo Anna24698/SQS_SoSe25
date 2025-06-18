@@ -29,7 +29,7 @@ public class CardLoaderTest {
 
     @BeforeEach
     void setup() {
-        // Du kannst hier allgemeine Vorbereitungen treffen
+        // hier allgemeine Vorbereitungen treffen
     }
 
     @Test

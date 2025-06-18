@@ -7,6 +7,7 @@ import com.gwent.gwentapplication.repository.GwentCardsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -29,7 +30,7 @@ public class CardLoader {
 
     }
 //Lade die Kartendaten in DB
-    //@PostConstruct //@TODO vor produktivsetzung wieder einkommentieren
+    @PostConstruct //@TODO vor produktivsetzung wieder einkommentieren
     public void loadCardData() throws Exception {
 
         url = "https://api.gwent.one/?key=data&version=3.0.0";

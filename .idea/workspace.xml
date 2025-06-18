@@ -53,6 +53,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "49f7c07df9830f1293aad023c566ad85",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -63,7 +64,7 @@
       <recent name="com.gwent.gwentapplication.constants" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GwentDeckTest">
+  <component name="RunManager" selected="JUnit.GwentCardsControllerTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="SQS_SoSe25" />
       <working_directory value="$PROJECT_DIR$" />
@@ -83,24 +84,6 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="CustomAuthenticationSuccessHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GwentApplication" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomAuthenticationSuccessHandlerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomUserDetailsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GwentApplication" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomUserDetailsServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GwentCardsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GwentApplication" />
       <option name="PACKAGE_NAME" value="" />
@@ -110,11 +93,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GwentCardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GwentCardsControllerTest.testZeigeDeckbauseite_withLeaderId_andAnonymousUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GwentApplication" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GwentCardsTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="GwentCardsControllerTest" />
+      <option name="METHOD_NAME" value="testZeigeDeckbauseite_withLeaderId_andAnonymousUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GwentCardsControllerTest.testZeigeDeckbauseite_withLeaderId_andAuthenticatedUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GwentApplication" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GwentCardsControllerTest" />
+      <option name="METHOD_NAME" value="testZeigeDeckbauseite_withLeaderId_andAuthenticatedUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GwentCardsControllerTest.testZeigeDeckbauseite_withoutLeaderId_andAuthenticatedUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GwentApplication" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GwentCardsControllerTest" />
+      <option name="METHOD_NAME" value="testZeigeDeckbauseite_withoutLeaderId_andAuthenticatedUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GwentDeckTest" />
-        <item itemvalue="JUnit.GwentCardsTest" />
         <item itemvalue="JUnit.GwentCardsControllerTest" />
-        <item itemvalue="JUnit.CustomUserDetailsServiceTest" />
-        <item itemvalue="JUnit.CustomAuthenticationSuccessHandlerTest" />
+        <item itemvalue="JUnit.GwentCardsControllerTest.testZeigeDeckbauseite_withoutLeaderId_andAuthenticatedUser" />
+        <item itemvalue="JUnit.GwentCardsControllerTest.testZeigeDeckbauseite_withLeaderId_andAnonymousUser" />
+        <item itemvalue="JUnit.GwentCardsControllerTest.testZeigeDeckbauseite_withLeaderId_andAuthenticatedUser" />
+        <item itemvalue="JUnit.GwentDeckTest" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +157,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750148251121</updated>
-      <workItem from="1750148252719" duration="13632000" />
+      <workItem from="1750148252719" duration="14395000" />
+      <workItem from="1750234973807" duration="1048000" />
     </task>
     <servers />
   </component>
@@ -163,13 +168,24 @@
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GwentApplication/src/test/java/GwentCardsControllerTest.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentCardsControllerTest.ic" NAME="GwentCardsControllerTest Coverage Results" MODIFIED="1750163590940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SQS_SoSe25$CustomAuthenticationSuccessHandlerTest.ic" NAME="CustomAuthenticationSuccessHandlerTest Coverage Results" MODIFIED="1750163558680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentCardsControllerTest.ic" NAME="GwentCardsControllerTest Coverage Results" MODIFIED="1750235321948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SQS_SoSe25$CustomAuthenticationSuccessHandlerTest.ic" NAME="CustomAuthenticationSuccessHandlerTest Coverage Results" MODIFIED="1750235243479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SQS_SoSe25$UserControllerTest_shouldDisplayRegisterForm.ic" NAME="UserControllerTest.shouldDisplayRegisterForm Coverage Results" MODIFIED="1750163367571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentDeckTest.ic" NAME="GwentDeckTest Coverage Results" MODIFIED="1750163619942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SQS_SoSe25$CustomUserDetailsServiceTest.ic" NAME="CustomUserDetailsServiceTest Coverage Results" MODIFIED="1750163572419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentCardsTest.ic" NAME="GwentCardsTest Coverage Results" MODIFIED="1750163608801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SQS_SoSe25$CardLoaderTest.ic" NAME="CardLoaderTest Coverage Results" MODIFIED="1750163521628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentDeckTest.ic" NAME="GwentDeckTest Coverage Results" MODIFIED="1750235361750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SQS_SoSe25$CustomUserDetailsServiceTest.ic" NAME="CustomUserDetailsServiceTest Coverage Results" MODIFIED="1750235294062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SQS_SoSe25$GwentCardsTest.ic" NAME="GwentCardsTest Coverage Results" MODIFIED="1750235347445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SQS_SoSe25$CardLoaderTest.ic" NAME="CardLoaderTest Coverage Results" MODIFIED="1750235271195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
