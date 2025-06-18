@@ -101,16 +101,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecurityConfigurationWebTest.testProtectedPostEndpointAccessibleWithAuth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GwentApplication" />
-      <option name="PACKAGE_NAME" value="IntegrationTests" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTests.SecurityConfigurationWebTest" />
-      <option name="METHOD_NAME" value="testProtectedPostEndpointAccessibleWithAuth" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GwentApplication" />
       <option name="PACKAGE_NAME" value="IntegrationTests" />
@@ -147,13 +137,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GwentApplication/docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="GwentApplication/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.GwentApplication/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="JUnit.SecurityConfigurationWebTest" />
         <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.UserControllerTest.shouldFailIfUserAlreadyExists" />
         <item itemvalue="JUnit.UserControllerTest.shouldRegisterUserSuccessfully" />
-        <item itemvalue="JUnit.SecurityConfigurationWebTest.testProtectedPostEndpointAccessibleWithAuth" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750148251121</updated>
       <workItem from="1750148252719" duration="14395000" />
-      <workItem from="1750234973807" duration="19501000" />
+      <workItem from="1750234973807" duration="23742000" />
     </task>
     <servers />
   </component>

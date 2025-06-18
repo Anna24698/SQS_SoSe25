@@ -7,26 +7,45 @@
 # You can add other services your application may depend on here, such as a
 # database or a cache. For examples, see the Awesome Compose repository:
 # https://github.com/docker/awesome-compose
+
+
+version: '3.9'
+
+
 services:
-  #server:
-  #  build:
-  #    context: .
-  #  depends_on:
-  #    - mariadb
-  #  links:
-  #    - mariadb:app_db
-  #  ports:
-  #    - 8080:8080
+  server:
+    build:
+      context: .
+    depends_on:
+        mariadb:
+          condition: service_healthy
+    #environment:
+    #  SPRING_PROFILES_ACTIVE: docker
+    links:
+      - mariadb:app_db
+    ports:
+      - 8080:8080
 
   mariadb:
-    image: mariadb
+    image: mariadb:11.8
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
       MYSQL_DATABASE: GwentDB
     ports:
       - "3306:3306"
+    healthcheck:
+      test: [ "CMD-SHELL", "mariadb-admin --user=root --password=root ping --silent || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 40s
+
+
+
+
+
+
+
     #volumes:
      # - "./gwentDB.sql:/docker-entrypoint-initdb.d/1.sql"
 # The commented out section below is an example of how to define a PostgreSQL
