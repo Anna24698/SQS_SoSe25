@@ -72,7 +72,7 @@
       <recent name="com.gwent.gwentapplication.constants" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SecurityConfigurationWebTest">
+  <component name="RunManager" selected="Spring Boot.GwentApplication">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="SQS_SoSe25" />
       <working_directory value="$PROJECT_DIR$" />
@@ -168,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750148251121</updated>
       <workItem from="1750148252719" duration="14395000" />
-      <workItem from="1750234973807" duration="25307000" />
+      <workItem from="1750234973807" duration="25651000" />
     </task>
     <servers />
   </component>
