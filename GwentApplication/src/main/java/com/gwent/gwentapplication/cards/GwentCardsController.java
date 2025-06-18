@@ -138,32 +138,35 @@ public class GwentCardsController {
       //Deck ist eine Liste aus Links
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Object principal = authentication.getPrincipal();
-        UserDetails userDetails = (UserDetails) principal;
-       String username = userDetails.getUsername();
 
 
-        GwentUsers user = gwentUsersRepository.findByUsername(username).get();
-        GwentDeck deckline = new GwentDeck();
-        deckline.setUserID(user);
-        gwentDeckRepository.deleteAll( gwentDeckRepository.findGwentDecksByUserId(user));
-        gwentDeckRepository.flush();
-        Long id = gwentDeckRepository.findMaxId();
-        for (String card: deck ){
-            card = card.substring(15);
-           if (gwentCardsRepository.findById(Long.parseLong(card)).isPresent()) {
-               id = id + 1;
-               deckline.setId(id);
-               deckline.setCardId(gwentCardsRepository.findById(Long.parseLong(card)).get());
-               gwentDeckRepository.save(deckline);
-           }
-        }
-        //Die LeaderCard
-        if (leaderId.isPresent()) {
-            id = id + 1;
-            deckline.setId(id);
-            deckline.setCardId(gwentCardsRepository.getReferenceById(leaderId.get()));
-            gwentDeckRepository.save(deckline);
-        }
-        return ResponseEntity.ok("Deck empfangen!");
+            UserDetails userDetails = (UserDetails) principal;
+            String username = userDetails.getUsername();
+
+
+            GwentUsers user = gwentUsersRepository.findByUsername(username).get();
+            GwentDeck deckline = new GwentDeck();
+            deckline.setUserID(user);
+            gwentDeckRepository.deleteAll(gwentDeckRepository.findGwentDecksByUserId(user));
+            gwentDeckRepository.flush();
+            Long id = gwentDeckRepository.findMaxId();
+            for (String card : deck) {
+                card = card.substring(15);
+                if (gwentCardsRepository.findById(Long.parseLong(card)).isPresent()) {
+                    id = id + 1;
+                    deckline.setId(id);
+                    deckline.setCardId(gwentCardsRepository.findById(Long.parseLong(card)).get());
+                    gwentDeckRepository.save(deckline);
+                }
+            }
+            //Die LeaderCard
+            if (leaderId.isPresent()) {
+                id = id + 1;
+                deckline.setId(id);
+                deckline.setCardId(gwentCardsRepository.getReferenceById(leaderId.get()));
+                gwentDeckRepository.save(deckline);
+            }
+            return ResponseEntity.ok("Deck empfangen!");
+
     }
 }

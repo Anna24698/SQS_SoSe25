@@ -17,7 +17,7 @@ public interface GwentUsersRepository extends JpaRepository<GwentUsers, Long> {
 
          Boolean existsByUsername(String username);
 
-
+         void deleteByUsername(String username);
 
     @Query("SELECT MAX(u.id) FROM GwentUsers u")
     Long findMaxId();

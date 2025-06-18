@@ -66,7 +66,9 @@ public class UserController {
         user.setRoles(Collections.singletonList(roles));
         Long maxId = gwentUsersRepository.findMaxId();
         if (maxId == null){
-            maxId = Integer.toUnsignedLong(0);
+            maxId = Integer.toUnsignedLong(100);
+        } else if (maxId < 100){
+            maxId = Integer.toUnsignedLong(100);
         }
         user.setId(maxId + 1);
         gwentUsersRepository.save(user);

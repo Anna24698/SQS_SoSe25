@@ -30,7 +30,7 @@ public class GwentUsers {
     private String password;
 
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "userid", referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(name = "roleid", referencedColumnName = "id"))
     private List<GwentRoles> roles = new ArrayList<>();

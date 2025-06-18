@@ -7,10 +7,15 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.net.URL;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,6 +36,77 @@ public class CardLoaderTest {
     void setup() {
         // hier allgemeine Vorbereitungen treffen
     }
+
+    @Test
+    void testLoadCardData_shouldParseAndSaveCardsCorrectly() throws Exception {
+        // Arrange – Beispielantwort wie von der echten API
+        String jsonResponse = """
+        {
+            "request": {
+                "message": "1 cards loaded successfully"
+            },
+            "response": {
+                "0": {
+                    "id": { "card": 1001, "art": 2002 },
+                    "attributes": {
+                        "set": "Set1",
+                        "type": "Unit",
+                        "color": "Gold",
+                        "power": "5",
+                        "reach": "Melee",
+                        "rarity": "Legendary",
+                        "faction": "Northern Realms",
+                        "provision": 10
+                    },
+                    "name": "Test Card",
+                    "category": "Soldier",
+                    "ability": "Deploy: Do something.",
+                    "keyword_html": "<b>Deploy</b>: Do something."
+                }
+            }
+        }
+        """;
+
+
+
+        // Mock HTTP response
+        HttpResponse<String> mockResponse = mock(HttpResponse.class);
+        when(mockResponse.body()).thenReturn(jsonResponse);
+
+        // Mock HttpClient
+        HttpClient mockClient = mock(HttpClient.class);
+        when(mockClient.send(any(HttpRequest.class), any(HttpResponse.BodyHandler.class)))
+                .thenReturn(mockResponse);
+
+        // Mock static call to HttpClient.newHttpClient()
+        try (MockedStatic<HttpClient> mockedStaticHttpClient = mockStatic(HttpClient.class)) {
+            mockedStaticHttpClient.when(HttpClient::newHttpClient).thenReturn(mockClient);
+
+            // Act
+            cardLoader.loadCardData();
+
+            // Assert – prüfe, dass save() mit korrektem Objekt aufgerufen wurde
+            ArgumentCaptor<GwentCards> cardCaptor = ArgumentCaptor.forClass(GwentCards.class);
+            verify(gwentCardsRepository, times(1)).save(cardCaptor.capture());
+            GwentCards savedCard = cardCaptor.getValue();
+
+            assertEquals(1001L, savedCard.getCardId());
+            assertEquals(2002L, savedCard.getArtId());
+            assertEquals("Set1", savedCard.getAttributeSet());
+            assertEquals("Unit", savedCard.getAttributeType());
+            assertEquals("Gold", savedCard.getAttributeColor());
+            assertEquals("5", savedCard.getAttributePower());
+            assertEquals("Melee", savedCard.getAttributeReach());
+            assertEquals("Legendary", savedCard.getAttributeRarity());
+            assertEquals("Northern Realms", savedCard.getAttributeFaction());
+            assertEquals(10, savedCard.getAttributeProvision());
+            assertEquals("Test Card", savedCard.getCardName());
+            assertEquals("Soldier", savedCard.getCardCategory());
+            assertEquals("Deploy: Do something.", savedCard.getCardAbility());
+            assertEquals("<b>Deploy</b>: Do something.", savedCard.getCardKeyword());
+        }
+    }
+
 
     @Test
     void testMergeImages_shouldReturnBufferedImage() throws IOException {
@@ -117,6 +193,34 @@ public class CardLoaderTest {
         assertNotNull(urls);
         assertFalse(urls.isEmpty());
         assertTrue(urls.stream().anyMatch(url -> url.contains("ability_crown.png")));
+    }
+
+    @Test
+    void testMergeImages_resizesImageWhenSizeDiffers() throws IOException {
+        // Arrange
+        String url1 = "https://example.com/image1.png";
+        String url2 = "https://example.com/image2.png";
+        List<String> urls = List.of(url1, url2);
+
+        // Basisbild 200x200
+        BufferedImage baseImage = new BufferedImage(200, 200, BufferedImage.TYPE_INT_ARGB);
+        // Zweites Bild ist kleiner – sollte skaliert werden
+        BufferedImage smallImage = new BufferedImage(300, 300, BufferedImage.TYPE_INT_ARGB);
+
+        try (MockedStatic<ImageIO> mockedImageIO = mockStatic(ImageIO.class)) {
+            mockedImageIO.when(() -> ImageIO.read(new URL(url1))).thenReturn(baseImage);
+            mockedImageIO.when(() -> ImageIO.read(new URL(url2))).thenReturn(smallImage);
+
+            // Act
+            BufferedImage result = cardLoader.mergeImages(urls);
+
+            // Assert
+            assertNotNull(result);
+            assertEquals(200, result.getWidth());
+            assertEquals(200, result.getHeight());
+
+
+        }
     }
 }
 

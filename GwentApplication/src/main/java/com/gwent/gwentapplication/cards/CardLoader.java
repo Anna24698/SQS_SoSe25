@@ -27,13 +27,13 @@ public class CardLoader {
     private GwentCardsRepository gwentCardsRepository;
     private String url;
     public CardLoader() {
-
+       url =  "https://api.gwent.one/?key=data&version=3.0.0";
     }
 //Lade die Kartendaten in DB
-    @PostConstruct //@TODO vor produktivsetzung wieder einkommentieren
+    //@PostConstruct //@TODO vor produktivsetzung wieder einkommentieren
     public void loadCardData() throws Exception {
 
-        url = "https://api.gwent.one/?key=data&version=3.0.0";
+
         // Alte Kartendaten aus DB löschen
       //  gwentCardsRepository.deleteAll();
       //  gwentCardsRepository.flush();
@@ -43,25 +43,24 @@ public class CardLoader {
                 .uri(URI.create(url))
                 .build();
 
-        // Antwort holen
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        // JSON in JsonObjekt verwandeln
-        String responseString = response.body();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString()); // Antwort holen
+
+
+        String responseString = response.body(); // JSON in JsonObjekt verwandeln
         responseString = "[" + responseString + "]";
         Gson gson = new Gson();
         JsonArray jsonArray = gson.fromJson(responseString, JsonArray.class);
-        JsonObject //jsonObject = new JsonObject();
-        jsonObject = jsonArray.get(0).getAsJsonObject();
+        JsonObject jsonObject = jsonArray.get(0).getAsJsonObject();
         int numberOfCards = Integer.valueOf( jsonObject.get("request").getAsJsonObject().get("message").getAsString().split(" ")[0] );
 
-        // Response des Objekts herausholen
-        jsonObject = jsonObject.get("response").getAsJsonObject();
+
+        jsonObject = jsonObject.get("response").getAsJsonObject(); // Response des Objekts herausholen
         JsonObject card = new JsonObject();
         JsonObject subcard = new JsonObject();
         GwentCards gwentCard = new GwentCards();
-        //Karten in DB abspeichern
-        for (int i = 0; i < numberOfCards; i++){
+
+        for (int i = 0; i < numberOfCards; i++){ //Karten in DB abspeichern
             card = jsonObject.get(String.valueOf(i)).getAsJsonObject();
             subcard = card.get("id").getAsJsonObject();
             gwentCard.setCardId(subcard.get("card").getAsLong());
@@ -103,7 +102,6 @@ public class CardLoader {
         // Bilder übereinander zeichnen
         for (String url : pictureUrl) {
             BufferedImage layer = ImageIO.read(new URL(url));
-            // Optional: Größe prüfen und skalieren
             if (layer.getWidth() != width || layer.getHeight() != height) {
                 layer = resizeImage(layer, width, height);
             }
@@ -160,7 +158,6 @@ public class CardLoader {
             urls.add("https://gwent.one/image/gwent/assets/card/banner/low/default_" + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
             urls.add("https://gwent.one/image/gwent/assets/card/other/low/trinket_"+ card.getAttributeType().toLowerCase() +".png");
             urls.add("https://gwent.one/image/gwent/assets/card/other/low/rarity_" + card.getAttributeRarity().toLowerCase() + ".png");
-
         } else {
             urls.add("https://gwent.one/image/gwent/assets/card/art/low/" + card.getArtId() + ".jpg");
             urls.add("https://gwent.one/image/gwent/assets/card/other/low/border_" + card.getAttributeColor().toLowerCase() + ".png");
@@ -169,7 +166,6 @@ public class CardLoader {
             urls.add("https://gwent.one/image/gwent/assets/card/other/low/ability_provision.png");
             urls.add("https://gwent.one/image/gwent/assets/card/number/low/ability_" + card.getAttributeProvision() + ".png");
             urls.add("https://gwent.one/image/gwent/assets/card/other/low/rarity_" + card.getAttributeRarity().toLowerCase() + ".png");
-
         }
         return urls;
     }
