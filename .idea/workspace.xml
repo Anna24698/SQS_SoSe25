@@ -54,6 +54,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "File.Encoding",
     "spring.configuration.checksum": "49f7c07df9830f1293aad023c566ad85",
     "vue.rearranger.settings.migration": "true"
   },
@@ -168,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750148251121</updated>
       <workItem from="1750148252719" duration="14395000" />
-      <workItem from="1750234973807" duration="26132000" />
+      <workItem from="1750234973807" duration="26399000" />
     </task>
     <servers />
   </component>
