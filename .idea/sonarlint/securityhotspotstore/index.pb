@@ -5,8 +5,6 @@
 TGwentApplication/src/test/java/com/gwent/gwentapplication/GwentApplicationTests.java,0\a\0a6a1ef1e64daab20cfb3e57db67e8da226a927d
 ~
 NGwentApplication/src/main/java/com/gwent/gwentapplication/GwentController.java,1\b\1ba634191433173e9c01f833d76bac48665fa223
-H
-.github/workflows/ci.yml,8\9\899ce9c202bf7bb5480e72836c3edc773c9c4244
 J
 Doku2/arc42-template-DE.md,d\0\d0edeb01c574dd7c3ef7edaf2717b10c961508ea
 @

@@ -72,6 +72,24 @@ jobs:
           name: compiled-code
           path: GwentApplication/target
 
+  start-db:
+    runs-on: ubuntu-latest
+    needs: build
+    services:
+      docker:
+        image: docker:24.0.2
+        options: --privileged
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Start MariaDB via Docker Compose
+        working-directory: GwentApplication
+        run: |
+          docker-compose up -d mariadb
+          echo "Waiting for MariaDB to initialize..."
+          sleep 20  # optional, replace with proper healthcheck if needed
+
   test:
     runs-on: ubuntu-latest
     needs: build
