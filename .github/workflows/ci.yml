@@ -125,9 +125,17 @@ jobs:
           name: compiled-code
           path: GwentApplication/target
 
+
+
+      - name:
+          Wait for DB to be ready
+        run: |
+          echo "Waiting for DB to be ready..."
+          sleep 20  # optional, if healthcheck is reliable, can be skipped
+
       - name: Run tests and generate JaCoCo report
         working-directory: GwentApplication
-        run: mvn verify
+        run: mvn verify -Dspring.profiles.active=ci
 
       - name: Upload JaCoCo report
         uses: actions/upload-artifact@v4
