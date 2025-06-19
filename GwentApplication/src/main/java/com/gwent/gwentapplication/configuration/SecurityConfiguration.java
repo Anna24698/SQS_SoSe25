@@ -1,6 +1,7 @@
 package com.gwent.gwentapplication.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -13,14 +14,28 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
 
 
-    @Autowired
-    private CustomAuthenticationSuccessHandler successHandler;
+  //  @Autowired
+  //  private CustomAuthenticationSuccessHandler successHandler;
+
+    private final AuthenticationSuccessHandler successHandler;
+
+    public SecurityConfiguration(AuthenticationSuccessHandler successHandler) {
+        this.successHandler = successHandler;
+    }
+
+    @Bean
+    @ConditionalOnMissingBean(AuthenticationSuccessHandler.class)
+    public AuthenticationSuccessHandler customSuccessHandler() {
+        return new CustomAuthenticationSuccessHandler();
+    }
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {

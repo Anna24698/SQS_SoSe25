@@ -1,0 +1,13 @@
+
+l
+java:S11922"JDefine a constant instead of duplicating this literal "gwentuser" 3 times.(©×Ò€ûÿÿÿÿ8ÆÓÛ—ø2
+r
+java:S3655A"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(˜Õµ³ùÿÿÿÿ8êÓÛ—ø2
+U	java:S1061"9Replace this use of System.out or System.err by a logger.(›×Š8ïÓÛ—ø2
+U	java:S1068"9Replace this use of System.out or System.err by a logger.(§ÅşÌ8ñÓÛ—ø2
+X	java:S125:"<This block of commented-out lines of code should be removed.(Ø·úö8òÓÛ—ø2
+n
+java:S1871F"LThis branch's code block is the same as the block for the branch on line 68.(±ò´’ıÿÿÿÿ8Ï°Ü—ø2
+X	java:S125K"<This block of commented-out lines of code should be removed.(Úë´ğ8õÓÛ—ø2
+X	java:S125Q"<This block of commented-out lines of code should be removed.(¸¶¹Â8öÓÛ—ø2
+Z	java:S106W"9Replace this use of System.out or System.err by a logger.(Æøşÿÿÿÿÿ8÷ÓÛ—ø2

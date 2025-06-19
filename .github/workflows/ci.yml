@@ -120,7 +120,7 @@ jobs:
 
       - name: Run tests and generate JaCoCo report
         working-directory: GwentApplication
-        run: mvn verify -Dspring.profiles.active=ci
+        run: mvn verify -Dspring.profiles.active=ci -X -e
 
       - name: Upload JaCoCo report
         uses: actions/upload-artifact@v4
