@@ -145,14 +145,18 @@ public class GwentCardsController {
 
 
             GwentUsers user = gwentUsersRepository.findByUsername(username).get();
-            GwentDeck deckline = new GwentDeck();
-            deckline.setUserID(user);
+
             gwentDeckRepository.deleteAll(gwentDeckRepository.findGwentDecksByUserId(user));
             gwentDeckRepository.flush();
             Long id = gwentDeckRepository.findMaxId();
+            if (id == null){
+                id=0L;
+            }
             for (String card : deck) {
                 card = card.substring(15);
                 if (gwentCardsRepository.findById(Long.parseLong(card)).isPresent()) {
+                    GwentDeck deckline = new GwentDeck();
+                    deckline.setUserID(user);
                     id = id + 1;
                     deckline.setId(id);
                     deckline.setCardId(gwentCardsRepository.findById(Long.parseLong(card)).get());
@@ -161,6 +165,8 @@ public class GwentCardsController {
             }
             //Die LeaderCard
             if (leaderId.isPresent()) {
+                GwentDeck deckline = new GwentDeck();
+                deckline.setUserID(user);
                 id = id + 1;
                 deckline.setId(id);
                 deckline.setCardId(gwentCardsRepository.getReferenceById(leaderId.get()));

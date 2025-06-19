@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-223.8836.41">
     <data-source name="GwentDB@localhost" uuid="739fc3c7-7055-4c5e-a3d0-cd266a545ebd">
-      <database-info product="MariaDB" version="11.7.2-MariaDB-ubu2404" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="11.7.2" exact-driver-version="3.3">
+      <database-info product="MariaDB" version="11.8.2-MariaDB-ubu2404" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.3.3" dbms="MARIADB" exact-version="11.8.2" exact-driver-version="3.3">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
@@ -11,7 +11,10 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="GwentDB" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

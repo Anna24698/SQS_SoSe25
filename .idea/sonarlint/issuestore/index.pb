@@ -33,8 +33,6 @@ w
 GGwentApplication/src/test/java/GwentCardsControllerIntegrationTest.java,2\2\22a1f2a4509d6a6dda9355726643600fa73e0b41
 l
 <GwentApplication/src/test/java/GwentCardsRepositoryTest.java,3\5\3588d0612a0d42075cf30e27a1bd4321101f361c
-‰
-YGwentApplication/src/main/java/com/gwent/gwentapplication/cards/GwentCardsController.java,1\3\13a162eb2c3154666fc816e08c4b86e89469cd26
 Ž
 ^GwentApplication/src/main/java/com/gwent/gwentapplication/repository/GwentUsersRepository.java,e\c\ec21fc40b84fb6a3e9b015c9ed9bfac275bdb8d9
 ‚

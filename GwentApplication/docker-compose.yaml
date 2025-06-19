@@ -19,8 +19,8 @@ services:
     depends_on:
         mariadb:
           condition: service_healthy
-    #environment:
-    #  SPRING_PROFILES_ACTIVE: docker
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
     links:
       - mariadb:app_db
     ports:
@@ -38,7 +38,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
-      start_period: 40s
+      start_period: 50s
 
 
 

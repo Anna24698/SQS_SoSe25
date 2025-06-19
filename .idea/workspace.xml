@@ -56,6 +56,7 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MavenSettings",
     "spring.configuration.checksum": "49f7c07df9830f1293aad023c566ad85",
+    "ts.external.directory.path": "C:\\Users\\aholzner\\Desktop\\USB\\Intellij\\IntelliJ IDEA 2022.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -73,7 +74,7 @@
       <recent name="com.gwent.gwentapplication.constants" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GwentApplication">
+  <component name="RunManager" selected="npm.test:e2e">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="SQS_SoSe25" />
       <working_directory value="$PROJECT_DIR$" />
@@ -111,26 +112,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.shouldFailIfUserAlreadyExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GwentApplication" />
-      <option name="PACKAGE_NAME" value="IntegrationTests" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTests.UserControllerTest" />
-      <option name="METHOD_NAME" value="shouldFailIfUserAlreadyExists" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.shouldRegisterUserSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GwentApplication" />
-      <option name="PACKAGE_NAME" value="IntegrationTests" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTests.UserControllerTest" />
-      <option name="METHOD_NAME" value="shouldRegisterUserSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GwentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="GwentApplication" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gwent.gwentapplication.GwentApplication" />
@@ -152,13 +133,33 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/GwentApplication/e2eTests/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/GwentApplication/e2eTests/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:e2e" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test:e2e" />
+        <item itemvalue="npm.start" />
         <item itemvalue="JUnit.SecurityConfigurationWebTest" />
         <item itemvalue="Docker.GwentApplication/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="JUnit.UserControllerTest" />
-        <item itemvalue="JUnit.UserControllerTest.shouldFailIfUserAlreadyExists" />
-        <item itemvalue="JUnit.UserControllerTest.shouldRegisterUserSuccessfully" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +173,7 @@
       <updated>1750148251121</updated>
       <workItem from="1750148252719" duration="14395000" />
       <workItem from="1750234973807" duration="27098000" />
-      <workItem from="1750324876849" duration="1392000" />
+      <workItem from="1750324876849" duration="10547000" />
     </task>
     <servers />
   </component>
@@ -194,6 +195,11 @@
           <url>file://$PROJECT_DIR$/GwentApplication/src/test/java/UnitTests/CardLoaderTest.java</url>
           <line>209</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GwentApplication/src/main/java/com/gwent/gwentapplication/cards/GwentCardsController.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

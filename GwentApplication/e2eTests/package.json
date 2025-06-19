@@ -1,0 +1,20 @@
+{
+  "name": "e2etests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e": "npx playwright test",
+    "start:services": "docker-compose up -d",
+    "stop:services": "docker-compose down",
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "playwright": "^1.53.1",
+    "start-server-and-test": "^2.0.12"
+  }
+}
