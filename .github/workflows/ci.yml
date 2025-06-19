@@ -103,7 +103,10 @@ jobs:
           name: compiled-code
           path: GwentApplication/target
 
-
+      - name: Write empty Maven settings.xml to avoid SecDispatcher
+        run: |
+          mkdir -p ~/.m2
+          echo "<settings></settings>" > ~/.m2/settings.xml
 
 
       - name:
