@@ -23,12 +23,6 @@ E
 docs/index.md,0\b\0b3e33619677413fe8f879987c9e0357046fe604
 ‚
 RGwentApplication/src/main/java/com/gwent/gwentapplication/entities/GwentCards.java,9\a\9aabc5e0f1a9b99966c4f803bf0247c2404b2945
-H
-docs/pages/einfuhrung.md,2\2\22b8d81da99e735e8e487251c4c828d9c616e392
-C
-docs/pages/index.md,2\b\2b259c519fd0de75a240b19e24b493a3c6c798f9
-?
-docs/mkdocs.yml,9\2\92296d7c759daa3d9dddb501c0aa111785edca58
 w
 GGwentApplication/src/test/java/GwentCardsControllerIntegrationTest.java,2\2\22a1f2a4509d6a6dda9355726643600fa73e0b41
 l
@@ -41,23 +35,7 @@ RGwentApplication/src/main/java/com/gwent/gwentapplication/entities/GwentRoles.j
 XGwentApplication/src/main/java/com/gwent/gwentapplication/repository/RoleRepository.java,c\8\c8f4683ab81e67b9ca00fc87b4a419183a6c550c
 ‚
 RGwentApplication/src/main/java/com/gwent/gwentapplication/entities/GwentUsers.java,c\7\c7259e646093e17ab03f4979369a35e5ef67a86f
-ƒ
-SGwentApplication/src/main/java/com/gwent/gwentapplication/users/UserController.java,1\1\11724b89c3881358481fc16b8f57251a6c369d63
-l
-<GwentApplication/src/test/java/UnitTests/CardLoaderTest.java,5\6\56018e61ec2849cebc78c548f6c94f729b575d14
-„
-TGwentApplication/src/test/java/UnitTests/CustomAuthenticationSuccessHandlerTest.java,3\b\3b46ebdbdd08ae34744e4546b0fb91c49ef162c0
-z
-JGwentApplication/src/test/java/UnitTests/CustomUserDetailsServiceTest.java,8\0\801b0dd263bc56c35f1c041b390856bfb6a4e555
-v
-FGwentApplication/src/test/java/UnitTests/GwentCardsControllerTest.java,5\d\5ded832abdd31322a872dd00bb5254eaaeb7ddbf
-l
-<GwentApplication/src/test/java/UnitTests/GwentCardsTest.java,e\d\ed4198dea27f599a32b5af79bc6d9d088b290202
-k
-;GwentApplication/src/test/java/UnitTests/GwentDeckTest.java,6\c\6cd4bb02a8cb5209e95cf111a5547162fa968be4
 
 OGwentApplication/src/main/java/com/gwent/gwentapplication/users/RoleLoader.java,7\2\7235af100712c7948fd494e2706939c9d0eba1ef
 K
 GwentApplication/Dockerfile,9\a\9a60f0ce7bfa075adce6934f5b413dc960fa03ef
-w
-GGwentApplication/src/test/java/IntegrationTests/UserControllerTest.java,e\b\eb38e0487ebcfcc2c234d9a8996a20d89d938839

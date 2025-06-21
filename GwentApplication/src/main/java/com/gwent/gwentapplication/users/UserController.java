@@ -46,14 +46,14 @@ public class UserController {
 
     @GetMapping("/register")
     public String register(Model model) {
-        System.out.println("Register get");
+
         model.addAttribute("gwentuser", new GwentUsers());
         return "registerUser";
     }
     @PostMapping("/register")
     public //ResponseEntity<Void>
             String registerPost (@ModelAttribute GwentUsers user, Model model){
-        System.out.println("Register post");
+
         if (Boolean.TRUE.equals(gwentUsersRepository.existsByUsername(user.getUsername()))){
             //return new ResponseEntity<>("Username is taken", HttpStatus.BAD_REQUEST);
             //return ResponseEntity.status(HttpStatus.).header(HttpHeaders.LOCATION, "/buildDeck").build();
@@ -84,7 +84,7 @@ public class UserController {
     }
     @PostMapping("/login")
     public ResponseEntity<Void> loginPost (@ModelAttribute GwentUsers user){
-        System.out.println("Login post");
+
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);

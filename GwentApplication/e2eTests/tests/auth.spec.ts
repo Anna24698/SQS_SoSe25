@@ -13,6 +13,8 @@ test('Registrieren funktioniert', async ({ page }) => {
     await expect(page).toHaveURL('/auth/login');
 });
 
+
+
 test('Login funktioniert', async ({ page }) => {
     await page.goto('/auth/login');
 
