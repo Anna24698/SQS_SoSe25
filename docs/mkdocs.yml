@@ -5,15 +5,15 @@ nav:
   - Einführung: einfuhrung.md
   - Installation: installation.md
   - API-Dokumentation: api_dokumentation.md
-  - Technisches:
-    - Randbedingungen: randbedingungen.md
-    - Kontext: kontext.md
-    - Lösungsstrategie: lösungsstrategie.md
-    - Bausteine: baustein.md
-    - Laufzeitszenarien: laufzeitszenarien.md
-    - Verteilungssicht: verteilungssicht.md
-    - Querschnittliche Konzepte: querschnitt.md
-    - Architekturentscheidungen: architektur.md
+  #- Technisches:
+  - Randbedingungen: randbedingungen.md
+  - Kontext: kontext.md
+  - Lösungsstrategie: lösungsstrategie.md
+  - Bausteine: baustein.md
+  - Laufzeitszenarien: laufzeitszenarien.md
+  - Verteilungssicht: verteilungssicht.md
+  - Querschnittliche Konzepte: querschnitt.md
+  - Architekturentscheidungen: architektur.md
   - Qualitätsanforderungen: qualitätsanforderungen.md
   - Bekannte Probleme/Risiken: probleme_risiken.md
   - ADRs: adr.md
