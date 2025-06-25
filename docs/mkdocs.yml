@@ -11,7 +11,7 @@ nav:
     - Lösungsstrategie: lösungsstrategie.md
     - Bausteine: baustein.md
     - Laufzeitszenarien: laufzeitszenarien.md
-    - Verteilungssicht: verteilungssicht.md
+    - Deployment: verteilungssicht.md
     - Querschnittliche Konzepte: querschnitt.md
     - Architekturentscheidungen: architektur.md
     - Qualitätsanforderungen: qualitätsanforderungen.md

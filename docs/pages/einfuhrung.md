@@ -20,7 +20,7 @@ Nach der Runde werden alle ausgespielten Karten in den Friedhof ihrer Spieler ge
 
 Der erste Spieler der zwei Runden gewonnen hat, hat das Spiel gewonnen.
 
-# Ziel des Projekts
+## Ziel des Projekts
 
 Das Endziel dieses Projekts ist es den Deckbau und das Kartenziehen zu simulieren. Hierbei sollen das ziehen der initialen Hand, das
 nachziehen durch den, zu Beginn des Spiels möglichen, Kartentausch und das ziehen von Karten durch Karten- und Anführereffekte simuliert werden.
@@ -28,3 +28,20 @@ nachziehen durch den, zu Beginn des Spiels möglichen, Kartentausch und das zieh
 Zusätzlich soll ein Benutzer der App die Möglichkeit haben die Hand zu bewerten und neu zu ziehen, um die neue Hand zu bewerten.
 Ab einer bestimmten Menge an Bewertungen soll ein Score für das Deck gebildet werden, der den Vergleich verschiedener Decks 
 durch den Benutzer ermöglicht.
+
+## Qualitätsziele des Projekts
+
+| Qualität        | Ziel                     |
+|-----------------|--------------------------|
+| Usability       | Intuitive, einfache Nutzung durch Benutzer |
+| Wartbarkeit     | Klare Strukturierung des Codes |
+| Portabilität    | Bereitstellung über Docker |
+| Erweiterbarkeit | Einfache Integration neuer Features |
+
+## Stakeholder des Projekts
+
+| Rolle           | Interesse                                                    |
+|-----------------|--------------------------------------------------------------|
+| Endnutzer       | Einfache Deckerstellung und Speicherung und Testen des Decks |
+| Entwickler      | Erweiterbarkeit, einfacher/gut strukturierter Code           |
+| Administratoren | Einfaches Deployment per Docker                              |

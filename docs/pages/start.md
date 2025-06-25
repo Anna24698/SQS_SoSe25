@@ -11,7 +11,7 @@ Dies ist die Dokumentation der "GwentApp". Im Folgenden werden die Bestandteile 
 - [Lösungsstrategie](lösungsstrategie.md): Hier werden die Kernideen und Lösungsansätze aufgeführt 
 - [Bausteine](baustein.md): Hier wird der Aufbau des Quellcodes dargestellt
 - [Laufzeitszenarien](laufzeitszenarien.md): Hier werden die wichtigsten Laufzeitszenarien aufgeführt und erläutert
-- [Verteilungssicht](verteilungssicht.md): Hier wird relevante Hardware, Infrastruktur und Deployment erläutert
+- [Deployment](verteilungssicht.md): Hier wird relevante Hardware, Infrastruktur und Deployment erläutert
 - [Querschnittliche Konzepte](querschnitt.md): 
 - [Architekturentscheidungen](architektur.md): Hier werden Architekturentscheidungen beschrieben 
 - [Qualitätsanforderungen](qualitätsanforderungen.md): Hier werden Aspekte für die Codequalität und die Projektqualität beschrieben

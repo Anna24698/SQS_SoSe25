@@ -59,14 +59,6 @@ _
 /GwentApplication/e2eTests/tests/global-setup.ts,5\e\5e18fb3f2a0e348cd0e500b58ea751d065be9ebf
 ^
 .GwentApplication/e2eTests/playwright.config.ts,b\2\b2655486ad8df92d1a99229440ccfadfb8439dce
-O
-docs/pages/laufzeitszenarien.md,4\6\468d49177257647e529253deada63160a8fa3f79
-N
-docs/pages/verteilungssicht.md,1\d\1d73c53e00588b922febbfc7f93d8f0324fad1eb
-I
-docs/pages/querschnitt.md,2\a\2a38c88157144d0b66294dae4acdb2cda26d6767
-I
-docs/pages/architektur.md,c\2\c2d397bdd534ac1da517c929df2d6d7ffc06eff3
 A
 docs/pages/adr.md,7\f\7ffef09980f8735e89b84ca936f61f0437ebae31
 E
@@ -75,12 +67,8 @@ D
 docs/pages/lizenz.md,6\e\6e07e9b4da06921ffe27e3f35fbc58552a3ebfa3
 C
 docs/pages/index.md,2\b\2b259c519fd0de75a240b19e24b493a3c6c798f9
-H
-docs/pages/einfuhrung.md,2\2\22b8d81da99e735e8e487251c4c828d9c616e392
 J
 docs/pages/installation.md,2\f\2f7f9cadd5390ce74c7944107b43ae8f579f78b3
-â
-YGwentApplication/src/main/java/com/gwent/gwentapplication/cards/GwentCardsController.java,1\3\13a162eb2c3154666fc816e08c4b86e89469cd26
 Å
 QGwentApplication/src/test/java/IntegrationTests/SecurityConfigurationWebTest.java,0\4\04012c111616a72e71f3685ed77cdeb071980e8c
 l

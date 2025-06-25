@@ -66,6 +66,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aholzner\Desktop\TH\SQS\SQS_SoSe25\docs\XML-Code" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="IntegrationTests" />
       <recent name="UnitTests" />
@@ -176,7 +179,7 @@
       <workItem from="1750324876849" duration="21756000" />
       <workItem from="1750667970638" duration="447000" />
       <workItem from="1750668444759" duration="573000" />
-      <workItem from="1750669042363" duration="2374000" />
+      <workItem from="1750669042363" duration="10809000" />
     </task>
     <servers />
   </component>

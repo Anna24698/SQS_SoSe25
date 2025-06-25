@@ -51,7 +51,7 @@ public class GwentCardsController {
         List<String> cardnames = new ArrayList<>();
         for (GwentCards card: cards) {
                 links.add("/buildDeck2?id=" + card.getCardId());
-                cardnames.add(card.getCardName() + card.getCardId() + card.getAttributeType());
+                cardnames.add(card.getCardName());
         }
         if (leaderId.isPresent()){
             GwentCards leader = gwentCardsRepository.getReferenceById(leaderId.get());
@@ -59,7 +59,7 @@ public class GwentCardsController {
             for (GwentCards card: cards) {
                 if (!Objects.equals(card.getCardCategory(), "Leader")) {
                     links.add("/buildDeck2?id=" + card.getCardId());
-                    cardnames.add(card.getCardName() + card.getCardId() + card.getAttributeType());
+                    cardnames.add(card.getCardName());
                 }
             }
             model.addAttribute("currentleadercard", "/buildDeck2?id=" + leader.getCardId() );
@@ -73,7 +73,7 @@ public class GwentCardsController {
         List<String> leadernames = new ArrayList<>();
         for (GwentCards leader: leaders) {
             leaderlinks.add("/buildDeck2?id=" + leader.getCardId());
-            leadernames.add(leader.getCardName() + leader.getCardId() + leader.getAttributeType());
+            leadernames.add(leader.getCardName());
         }
         model.addAttribute("leaders", leaderlinks.toArray());
         model.addAttribute("leadernames", leadernames.toArray());

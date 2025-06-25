@@ -1,18 +1,13 @@
 # Kontext
 
-```mermaid
-graph LR
-    User([User]) --> Browser/Client
-    Browser/Client --> Backend/Server
-    Backend/Server --> Datenbank([Datenbank - MariaDB])
-    Backend/Server --"REST: GET"--> Api([Externe API - api.gwent.one])
 
 
-```
+![Kontextdiagramm.png](..%2FBilder%2FKontextdiagramm.png)
+
+[XML-Code](..%2FXML-Code%2FKontextdiagramm.drawio.xml)
+
 ## Schnittstellen
 
 MariaDB als persistenter Speicher
-
-## Externe Systeme
 
 https://api.gwent.one/ für die Kartendaten und die Bilder
