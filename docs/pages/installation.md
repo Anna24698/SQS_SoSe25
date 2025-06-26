@@ -2,7 +2,7 @@
 
 ## Voraussetzungen
 
-- Windows, macOS und Linux
+- Windows, macOS oder Linux
 - eine laufende Docker Umgebung
 
 

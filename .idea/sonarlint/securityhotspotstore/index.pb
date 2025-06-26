@@ -67,8 +67,6 @@ D
 docs/pages/lizenz.md,6\e\6e07e9b4da06921ffe27e3f35fbc58552a3ebfa3
 C
 docs/pages/index.md,2\b\2b259c519fd0de75a240b19e24b493a3c6c798f9
-J
-docs/pages/installation.md,2\f\2f7f9cadd5390ce74c7944107b43ae8f579f78b3
 Å
 QGwentApplication/src/test/java/IntegrationTests/SecurityConfigurationWebTest.java,0\4\04012c111616a72e71f3685ed77cdeb071980e8c
 l
@@ -89,3 +87,21 @@ SGwentApplication/src/main/java/com/gwent/gwentapplication/users/UserController.
 ,GwentApplication/e2eTests/tests/auth.spec.ts,8\4\84224184ec2d474f7d139e80e779c79845942ca7
 w
 GGwentApplication/src/test/java/IntegrationTests/UserControllerTest.java,e\b\eb38e0487ebcfcc2c234d9a8996a20d89d938839
+H
+GwentApplication/pom.xml,a\5\a5dcc5d8c0df53ccacf413b6cddfadafc97f6a98
+N
+docs/pages/probleme_risiken.md,4\8\482aa0ea36b9a73e3132a4030f59f402e3909675
+í
+bGwentApplication/src/main/java/com/gwent/gwentapplication/configuration/SecurityConfiguration.java,7\e\7ea0158173aa23557c652481ca6b2a5e3239e807
+L
+docs/pages/timeline_todos.md,1\d\1d5adab81d245848b9c9d645ff6600e16ebd197b
+â
+YGwentApplication/src/main/java/com/gwent/gwentapplication/cards/GwentCardsController.java,1\3\13a162eb2c3154666fc816e08c4b86e89469cd26
+H
+docs/pages/einfuhrung.md,2\2\22b8d81da99e735e8e487251c4c828d9c616e392
+M
+docs/pages/randbedingungen.md,0\6\06aec33b2822eae1769977e04236892042e4879a
+O
+docs/pages/l√∂sungsstrategie.md,6\7\67fc9fd7d72707ad688dedca28be8e57f96aa3db
+E
+docs/pages/kontext.md,9\4\945f99f18ab76e180c321d24d6084449b43ffda0

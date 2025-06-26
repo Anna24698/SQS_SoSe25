@@ -12,9 +12,11 @@ Der Endpunkt, der die Registrierung eines neuen Benutzers ermöglicht.
 2. POST: Fügt einen neuen Benutzer in die Datenbank ein
 
    Parameter:
+
    - `user` (Gwentuser, erforderlich): Der Benutzer als Objekt Gwentuser mit den Parametern `username` und `password`
 
    Antwort:
+
    - Status 302 (IsFound): Der Benutzer wurde angelegt und der Browser leitet auf /auth/login weiter
    - Status 200 (IsOk): Der Benutzer existiert schon und wurde deshalb nicht angelegt
 
@@ -24,9 +26,11 @@ Der Endpunkt, der die Registrierung eines neuen Benutzers ermöglicht.
 2. POST: Meldet den Benutzer an
    
    Parameter:
+
    - `user` (Gwentuser, erforderlich): Der Benutzer als Objekt Gwentuser mit den Parametern `username` und `password`
 
    Antwort:
+
    - Status 302 (IsFound): Der Benutzer wurde angemeldet und der Browser leitet auf /buildDeck weiter
    - Status 200 (IsOk): Der Benutzer existiert noch nicht, oder das falsche Passwort wurde angegeben 
 
@@ -50,17 +54,21 @@ Der Endpunkt, der die Registrierung eines neuen Benutzers ermöglicht.
 ### 2. **GET http://localhost:8080/buildDeck2**
 
    Gibt ein Byte-Array zurück, dass ein Bild ist.
-   Parameter: - id: Die ID einer Karte
+   Parameter: 
+
+- id: Die ID einer Karte
    
 
 ### 3. **POST http://localhost:8080/submit-deck**
 
    Speichert ein Deck ab.
    Parameter: 
+
    - `deck`: Ein String der aus einer Liste an IDs zusammengefügt wird
    - `leaderId`: (optional) Die ID des Anführers des Decks 
 
    Antwort:
+
    - Status 200 (IsOk): Das Deck wurde gespeichert
    
    Dies funktioniert nur, wenn der Benutzer angemeldet ist 

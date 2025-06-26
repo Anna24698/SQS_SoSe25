@@ -1,0 +1,15 @@
+
+c
+java:S1192<"GDefine a constant instead of duplicating this literal "Leader" 4 times.(¹Ì›!8©‹ªú2
+m
+java:S11925"PDefine a constant instead of duplicating this literal "/buildDeck2?id=" 5 times.(ıÁÁÔ8©‹ªú2
+m
+java:S3655Y"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(€ÛŸÑ8–•ªú2
+n
+java:S3655¢"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÜûãĞ8–•ªú2
+n
+java:S3655“"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(€ÛŸÑ8••ªú2
+n
+java:S3776."RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Ñ¶ªj8©•ªú2
+O
+java:S1135d"2Complete the task associated to this TODO comment.(·èß8à•ªú2
