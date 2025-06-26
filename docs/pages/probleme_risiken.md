@@ -1,6 +1,16 @@
-# Probleme
+# Bekannte Probleme
 
-- Spring Boot beendet sich selber (mit code 1):
+## 1. Spring Boot beendet sich selber (mit code 1):
   
-    Grund: Spring Boot startet bevor MariaDB fertig hochgefahren ist
-    Lösungsvorschläge: den gwentapplication-container manuell neustarten, oder die container mit docker compose up neustarten  
+- Grund: Spring Boot startet, bevor MariaDB fertig hochgefahren ist
+
+- Lösungsvorschläge: 
+  - den gwentapplication-container manuell neustarten, 
+  - oder die Container mit ``Strg+C`` stoppen und mit ``docker compose up``  neu starten
+
+
+# Bekannte Risiken
+
+Momentan keine bekannt
+
+Sollten Probleme oder Risiken auffallen, bitte informieren Sie mich.

@@ -19,4 +19,4 @@ Dies ist die Dokumentation der "GwentApp". Im Folgenden werden die Bestandteile 
 - [ADRs](adr.md): Hier werden Bestimmte Entscheidungen in dem Projekt aufgeführt und erläutert 
 - [Timeline und TODOs](timeline_todos.md): Hier werden zukünftige Entwicklungen des Projekts aufgeführt 
 - [Glossar](glossar.md): Hier werden Begriffe mit mehreren Bedeutungen geklärt
-- [Lizenz](lizenz.md): Hier ist die Lizenz für das Projekt zu finden
+<!-- - [Lizenz](lizenz.md): Hier ist die Lizenz für das Projekt zu finden -->

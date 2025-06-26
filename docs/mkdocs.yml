@@ -19,7 +19,7 @@ nav:
   - ADRs: adr.md
   - Timeline und TODOs: timeline_todos.md
   - Glossar: glossar.md
-  - Lizenz: lizenz.md
+  #- Lizenz: lizenz.md
 theme:
   name: material
   palette:

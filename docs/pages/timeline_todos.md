@@ -1,11 +1,16 @@
 # TODOs
 
-logging einbauen
+Bis zum Deployment der Version 1.0 des Projekts werden folgende Funktionalitäten umgesetzt werden:
 
-Mehrere Decks pro Benutzer speicherbar
+- logging einbauen
 
-Flywaymigrationen von DBs einbauen
+- Mehrere Decks pro Benutzer speicherbar
 
-Bessere Lösung für Bilder finden
+- Flywaymigrationen von DBs einbauen
 
-caching für Bilder einbauen
+- Bessere Lösung für Bilder finden
+
+- caching für Bilder einbauen
+- Decks werden beim Speichern überprüft
+- Decks können getestet werden
+

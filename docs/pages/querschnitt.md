@@ -22,3 +22,12 @@ Java-Script-Code ist für die funktionalität in der Oberfläche selbst und das 
 
 ## Qualitätssichernde Maßnahmen und Tests
 
+- Unit-Tests:  JUnit5 und Mockito
+
+- Integration-Tests: SpringBootTest und MockMvc
+
+- e2e-Tests: Playwright
+
+- Penetrations-Tests: mit spring-security-test 
+
+- Codeanalyse: Testabdeckung mit JaCoCo

@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.4</version>
+        <version>3.4.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.gwent</groupId>
@@ -28,6 +28,7 @@
     </scm>
     <properties>
         <java.version>21</java.version>
+        <tomcat.version>10.1.42</tomcat.version>
     </properties>
     <dependencies>
         <dependency>
@@ -183,14 +184,6 @@
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>10.17.0</version>
-               <!--  <configuration>
-                    <user>root</user>
-                    <password>root</password>
-                    <schemas>
-                        <schema>GwentDB</schema>
-                    </schemas>
-                    ...
-                </configuration>-->
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -208,13 +201,6 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
-                      <!--  <configuration>
-                            <excludes>
-                                <exclude>**/dtos/**</exclude>  TODO mit realen Ordnern ersetzen --><!--
-                                <exclude>**/constants/**</exclude>
-                                <exclude>**/repository/**</exclude>
-                            </excludes>
-                        </configuration>-->
                     </execution>
                 </executions>
             </plugin>
