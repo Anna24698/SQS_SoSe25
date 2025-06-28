@@ -5,7 +5,7 @@ wie [dieser](https://www.planttext.com/) überarbeitet und angepasst werden kann
 
 1. Nutzer registriert sich
 
-![Laufzeitszenario_1.png](..%2FBilder%2FLaufzeitszenario_1.png)
+![Laufzeitszenario_1.png](bilder%2FLaufzeitszenario_1.png)
 
 <details>
 
@@ -44,7 +44,7 @@ Frontend -> Nutzer: Zeige Registrierungsseite mit Fehler
 
 2. Nutzer logged sich ein
 
-![Laufzeitszenario_2.png](..%2FBilder%2FLaufzeitszenario_2.png)
+![Laufzeitszenario_2.png](bilder%2FLaufzeitszenario_2.png)
 
 <details>
 @startuml
@@ -106,7 +106,7 @@ Frontend -> Nutzer: Zeige Loginseite
 
 3. Nutzer logged sich aus
 
-![Laufzeitszenario_3.png](..%2FBilder%2FLaufzeitszenario_3.png)
+![Laufzeitszenario_3.png](bilder%2FLaufzeitszenario_3.png)
 
 <details>
 @startuml
@@ -132,7 +132,7 @@ Frontend -> Nutzer: Zeige Deckbauseite
 
 4. Nutzer stellt ein Deck zusammen (unangemeldet)
 
-![Laufzeitszenario_4.png](..%2FBilder%2FLaufzeitszenario_4.png)
+![Laufzeitszenario_4.png](bilder%2FLaufzeitszenario_4.png)
 
 
 <details>
@@ -191,7 +191,7 @@ Frontend -> Nutzer: zeigt Karte in Deck
 
 Nutzer hat noch kein Deck:
 
-![Laufzeitszenario_5_1.png](..%2FBilder%2FLaufzeitszenario_5_1.png)
+![Laufzeitszenario_5_1.png](bilder%2FLaufzeitszenario_5_1.png)
 
 <details>
 @startuml
@@ -258,7 +258,7 @@ Backend -> MariaDB: Speichert Deck ab
 
 Nutzer hat bereits ein Deck:
 
-![Laufzeitszenario_5_2.png](..%2FBilder%2FLaufzeitszenario_5_2.png)
+![Laufzeitszenario_5_2.png](bilder%2FLaufzeitszenario_5_2.png)
 
 <details>
 @startuml

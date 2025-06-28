@@ -9,9 +9,13 @@ Zur Sicherung der Endpunkte wurde Spring Security eingebaut und konfiguriert
 Die Benutzeroberflächen wurden mit einer Kombination aus den folgenden Technologien erstellt:
 
 - Thymeleaf
+
 - .html Code
+
 - .js Code
+
 - CSS-Code
+
 - Bootstrap
 
 HTML-Code, CSS-Code und Bootstrap sind für das Aussehen der Oberflächen verantwortlich.

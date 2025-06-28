@@ -2,7 +2,7 @@
 
 
 
-![Kontextdiagramm.png](..%2FBilder%2FKontextdiagramm.png)
+![Kontextdiagramm.png](bilder%2FKontextdiagramm.png)
 
 [XML-Code](..%2FXML-Code%2FKontextdiagramm.drawio.xml)
 
