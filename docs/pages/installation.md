@@ -11,8 +11,8 @@
 1. **Navigieren Sie in das gewünschte Verzeichnis**
 
     ```sh
-   cd <Pfad des Ordners>
-   ```
+    cd <Pfad des Ordners>
+    ```
 
 2. **Clonen Sie das Repository**
 
