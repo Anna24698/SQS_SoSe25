@@ -1,4 +1,4 @@
-package com.gwent.gwentapplication.cards;
+package com.gwent.gwentapplication.loader;
 
 
 import com.google.gson.*;

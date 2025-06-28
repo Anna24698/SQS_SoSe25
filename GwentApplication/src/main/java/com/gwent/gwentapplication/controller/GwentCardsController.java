@@ -1,7 +1,8 @@
-package com.gwent.gwentapplication.cards;
+package com.gwent.gwentapplication.controller;
 
 import com.gwent.gwentapplication.entities.GwentCards;
 import com.gwent.gwentapplication.entities.GwentDeck;
+import com.gwent.gwentapplication.loader.CardLoader;
 import com.gwent.gwentapplication.repository.GwentDeckRepository;
 import com.gwent.gwentapplication.entities.GwentUsers;
 import com.gwent.gwentapplication.repository.GwentCardsRepository;

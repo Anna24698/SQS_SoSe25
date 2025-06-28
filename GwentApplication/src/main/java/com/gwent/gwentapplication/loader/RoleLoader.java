@@ -1,4 +1,4 @@
-package com.gwent.gwentapplication.users;
+package com.gwent.gwentapplication.loader;
 
 import com.gwent.gwentapplication.entities.GwentRoles;
 import com.gwent.gwentapplication.repository.RoleRepository;

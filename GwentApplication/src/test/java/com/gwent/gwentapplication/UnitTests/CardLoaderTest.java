@@ -1,6 +1,6 @@
 package com.gwent.gwentapplication.UnitTests;
 
-import com.gwent.gwentapplication.cards.CardLoader;
+import com.gwent.gwentapplication.loader.CardLoader;
 import com.gwent.gwentapplication.entities.GwentCards;
 import com.gwent.gwentapplication.repository.GwentCardsRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +13,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;

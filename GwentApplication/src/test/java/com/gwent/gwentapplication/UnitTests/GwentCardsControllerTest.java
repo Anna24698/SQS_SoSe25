@@ -1,9 +1,9 @@
 package com.gwent.gwentapplication.UnitTests;
 
 
-import com.gwent.gwentapplication.cards.CardLoader;
+import com.gwent.gwentapplication.loader.CardLoader;
 import com.gwent.gwentapplication.entities.GwentCards;
-import com.gwent.gwentapplication.cards.GwentCardsController;
+import com.gwent.gwentapplication.controller.GwentCardsController;
 import com.gwent.gwentapplication.entities.GwentDeck;
 import com.gwent.gwentapplication.repository.GwentCardsRepository;
 import com.gwent.gwentapplication.repository.GwentDeckRepository;
