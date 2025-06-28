@@ -10,5 +10,4 @@ class GwentApplicationTests {
     void contextLoads() {
     }
 
-}
-*/
+}*/

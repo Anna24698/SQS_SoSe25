@@ -1,4 +1,4 @@
-package UnitTests;
+package com.gwent.gwentapplication.UnitTests;
 
 import com.gwent.gwentapplication.cards.CardLoader;
 import com.gwent.gwentapplication.entities.GwentCards;
