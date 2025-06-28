@@ -3,7 +3,7 @@
 (In den Details findet sich der UML-Code, der auf verschiedenen Webseiten,
 wie [dieser](https://www.planttext.com/) überarbeitet und angepasst werden kann)
 
-1. Nutzer registriert sich
+## 1. Nutzer registriert sich
 
 ![Laufzeitszenario_1.png](bilder%2FLaufzeitszenario_1.png)
 
@@ -42,7 +42,7 @@ Frontend -> Nutzer: Zeige Registrierungsseite mit Fehler
 @enduml
 </details>
 
-2. Nutzer logged sich ein
+## 2. Nutzer logged sich ein
 
 ![Laufzeitszenario_2.png](bilder%2FLaufzeitszenario_2.png)
 
@@ -104,7 +104,7 @@ Frontend -> Nutzer: Zeige Loginseite
 </details>
 
 
-3. Nutzer logged sich aus
+## 3. Nutzer logged sich aus
 
 ![Laufzeitszenario_3.png](bilder%2FLaufzeitszenario_3.png)
 
@@ -130,7 +130,7 @@ Frontend -> Nutzer: Zeige Deckbauseite
 </details>
 
 
-4. Nutzer stellt ein Deck zusammen (unangemeldet)
+## 4. Nutzer stellt ein Deck zusammen (unangemeldet)
 
 ![Laufzeitszenario_4.png](bilder%2FLaufzeitszenario_4.png)
 
@@ -187,7 +187,7 @@ Frontend -> Nutzer: zeigt Karte in Deck
 </details>
 
 
-5. Nutzer stellt ein Deck zusammen (angemeldet) und speichert dieses
+## 5. Nutzer stellt ein Deck zusammen (angemeldet) und speichert dieses
 
 Nutzer hat noch kein Deck:
 
