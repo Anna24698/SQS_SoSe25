@@ -2,7 +2,7 @@
 
 Dies ist die Dokumentation der "GwentApp". Im Folgenden werden die Bestandteile der Dokumentation aufgeführt und erläutert.
 
-- [Start](start.md): Hier befindet sich eine Übersicht über die Bestandteile der Dokumentation
+- [Start](index.md): Hier befindet sich eine Übersicht über die Bestandteile der Dokumentation
 - [Einführung](einfuhrung.md): Hier werden die Idee für das Projekt und die gewünschten Ziel aufgeführt (arc42: 1.)
 - [Installation](installation.md): Hier werden die Anweisungen für die Installation der App gegeben 
 - [API-Dokumentation](api_dokumentation.md): Hier werden die Endpunkte der App erläutert
