@@ -4,6 +4,7 @@
 
 
 ![Baustein_ebene_1.png](..%2FBilder%2FBaustein_ebene_1.png)
+
 [Baustein_ebene_1.drawio.xml](..%2FXML-Code%2FBaustein_ebene_1.drawio.xml)
 
 Der Browser nimmt Requests des Benutzers entgegen und gibt diese Requests an den 
@@ -15,6 +16,7 @@ API.
 ## Level 3 - Detailansicht
 
 ![Baustein_ebene_3.png](..%2FBilder%2FBaustein_ebene_3.png)
+
 [Baustein_ebene_3.drawio.xml](..%2FXML-Code%2FBaustein_ebene_3.drawio.xml)
 
 Der Browser nimmt Requests des Benutzers an. Zur Authentifizierung werden die Endpunkte des 

@@ -14,26 +14,26 @@ Frameworks:
 
 Build-System: Maven
 
-Test-Frameworks: JUnit (über Spring Boot Starter Test), Mockito
+Test-Frameworks: JUnit, Mockito
 
-Security: Spring Security 6 + JWT (io.jsonwebtoken)
+Security: Spring Security 6 
 
-Templating: Thymeleaf + Spring Security Integration (thymeleaf-extras-springsecurity6)
+Templating: Thymeleaf + Spring Security
 
 
 
-Persistence-Layer: JPA (Hibernate), MariaDB für produktive Nutzung
+Persistence-Layer: JPA (Hibernate), MariaDB 
 
 ## 1.2 Laufzeitumgebung
 
-Lokal: Java Runtime Environment (JRE): Java 21 
+Lokal: Java Runtime Environment: Java 21 
 
 Zielplattform: Docker Container
 
 
 ## 1.3 Infrastruktur- und Datenbankabhängigkeiten
 
-Datenbanken: MariaDB (Zugriff über MariaDB JDBC-Treiber)
+Datenbanken: MariaDB
 
 Drittanbieter: [Gwent.one](https://api.gwent.one/)
 
@@ -52,5 +52,5 @@ Dependency Management: Maven Central Repository
 
 Authentifizierung & Autorisierung: Basierend auf Spring Security 
 
-View-Schutz: Integriert über Thymeleaf-Spring-Security-Extras
+View-Schutz: Thymeleaf und Spring Security
 

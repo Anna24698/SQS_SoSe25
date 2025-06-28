@@ -16,7 +16,7 @@ nav:
     - Architekturentscheidungen: architektur.md
     - Qualitätsanforderungen: qualitätsanforderungen.md
   - Bekannte Probleme/Risiken: probleme_risiken.md
-  - ADRs: adr.md
+  #- ADRs: adr.md
   - Timeline und TODOs: timeline_todos.md
   - Glossar: glossar.md
   #- Lizenz: lizenz.md
