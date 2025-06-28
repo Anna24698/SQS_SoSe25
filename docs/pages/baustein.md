@@ -3,29 +3,26 @@
 ## Level 1 - Gesamtüberblick
 
 
-```mermaid
-graph TD
+![Baustein_ebene_1.png](..%2FBilder%2FBaustein_ebene_1.png)
+[Baustein_ebene_1.drawio.xml](..%2FXML-Code%2FBaustein_ebene_1.drawio.xml)
 
-    %% Akteure
-    User([User]) --> Frontend
-    Administrator([Administrator]) --> DockerCompose
+Der Browser nimmt Requests des Benutzers entgegen und gibt diese Requests an den 
+Backend-Server weiter. Der Backend-Server verarbeitet die Requests und sorgt für die 
+Anzeige des Ergebnisses. Beim verarbeiten des Requests greift der 
+Backend-Server auf die Daten der MariaDB zurück und holt sich eventuelle Bilder von der Externen
+API.
 
-    %% Bausteine
-    subgraph GwentApp [GwentApplication - docker-container]
-        Frontend[Frontend]
-        Backend[Backend]
-        Datenbank[Datenbank]
-    end
+## Level 3 - Detailansicht
 
-    %% Beziehungen zwischen Bausteinen
-    Frontend -->|Rest-Requests| Backend
-    Backend --> Datenbank
-    Backend -->|Rest-Requests| GwentAPI[Gwent API]
+![Baustein_ebene_3.png](..%2FBilder%2FBaustein_ebene_3.png)
+[Baustein_ebene_3.drawio.xml](..%2FXML-Code%2FBaustein_ebene_3.drawio.xml)
 
-    %% Infrastruktur
-    DockerCompose -->|builds| Backend
-    
-```
-
-TODO
-
+Der Browser nimmt Requests des Benutzers an. Zur Authentifizierung werden die Endpunkte des 
+UserControllers verwendet. Dieser holt sich die relevanten Benutzerdaten aus den entsprechenden
+Tabellen der Datenbank. Zur sicherung der Endpunkte wird der UserController von Spring Security unterstützt.
+Neben den Authentifizierungsendpunkten gibt es noch die Endpunkte des CardControllers. Diese beinhalten im moment 
+alle anderen 
+Endpunkte der Applikation. Die Kartendaten der Anzeige werden aus den entsprechenden Tabellen der Datenbank 
+geholt, während die Bilder über den CardLoader von der externen API geholt werden.
+Der Cardloader ist auch dafür verantwortlich, dass die Kartendaten von der externen API in die 
+entsprechenden Tabellen der Datenbank übertragen werden.

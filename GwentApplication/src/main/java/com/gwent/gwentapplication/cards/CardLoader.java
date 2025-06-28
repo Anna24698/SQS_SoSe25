@@ -25,22 +25,15 @@ public class CardLoader {
 
     @Autowired
     private GwentCardsRepository gwentCardsRepository;
-    private String url;
-    public CardLoader() {
-       url =  "https://api.gwent.one/?key=data&version=3.0.0";
-    }
+
 //Lade die Kartendaten in DB
     @PostConstruct //@TODO vor produktivsetzung wieder einkommentieren
     public void loadCardData() throws Exception {
 
 
-        // Alte Kartendaten aus DB löschen
-      //  gwentCardsRepository.deleteAll();
-      //  gwentCardsRepository.flush();
-        // HTTP-Client & Request
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
+                .uri(URI.create(API_URL))
                 .build();
 
 
@@ -56,8 +49,8 @@ public class CardLoader {
 
 
         jsonObject = jsonObject.get("response").getAsJsonObject(); // Response des Objekts herausholen
-        JsonObject card = new JsonObject();
-        JsonObject subcard = new JsonObject();
+        JsonObject card;// = new JsonObject();
+        JsonObject subcard;// = new JsonObject();
         GwentCards gwentCard = new GwentCards();
 
         for (int i = 0; i < numberOfCards; i++){ //Karten in DB abspeichern
@@ -123,49 +116,41 @@ public class CardLoader {
     //erstelle die URLs für mergeImages
     public List<String> collectURLs (String cardId){
         GwentCards card =  gwentCardsRepository.getReferenceById(parseLong(cardId));
-        List<String> urls = new ArrayList<String>();
+        List<String> urls = new ArrayList<>();
 
         if (card.getAttributeType().equals("Unit")) {
-            //urls.add("https://gwent.one/image/gwent/assets/card/art/low/" + card.getArtId() + ".jpg");
-            //urls.add("https://gwent.one/image/gwent/assets/card/other/low/border_" + card.getAttributeColor().toLowerCase() + ".png");
             urls.add(GC_ART_LOW + card.getArtId() + ".jpg");
             urls.add(GC_ART_BORDER + card.getAttributeColor().toLowerCase() + ".png");
 
             if (card.getAttributeProvision() != 0) {
-                //urls.add("https://gwent.one/image/gwent/assets/card/banner/low/provision_icon.png");
-                //urls.add("https://gwent.one/image/gwent/assets/card/banner/low/provision_" + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
-                //urls.add("https://gwent.one/image/gwent/assets/card/number/low/provision_" + card.getAttributeProvision() + ".png");
                 urls.add(GC_ART_PROVISION_ICON);
                 urls.add(GC_ART_PROVISION_ATTRIBUTE + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
                 urls.add(GC_ART_PROVISION_NUMBER + card.getAttributeProvision() + ".png");
             }
-            //urls.add("https://gwent.one/image/gwent/assets/card/banner/low/default_" + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
-            //urls.add("https://gwent.one/image/gwent/assets/card/number/low/power_" + card.getAttributePower() + ".png");
-            //urls.add("https://gwent.one/image/gwent/assets/card/other/low/rarity_" + card.getAttributeRarity().toLowerCase() + ".png");
             urls.add(GC_ART_BANNER + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
             urls.add(GC_ART_POWER + card.getAttributePower() + ".png");
             urls.add(GC_ART_RARITY + card.getAttributeRarity().toLowerCase() + ".png");
 
         } else if (card.getAttributeType().equals("Special") || card.getAttributeType().equals("Artifact") || card.getAttributeType().equals("Stratagem")) {
 
-            urls.add("https://gwent.one/image/gwent/assets/card/art/low/" + card.getArtId() + ".jpg");
-            urls.add("https://gwent.one/image/gwent/assets/card/other/low/border_" + card.getAttributeColor().toLowerCase() + ".png");
+            urls.add(GC_ART_LOW + card.getArtId() + ".jpg");
+            urls.add(GC_ART_BORDER +  card.getAttributeColor().toLowerCase() + ".png");
             if (card.getAttributeProvision() != 0) {
-                urls.add("https://gwent.one/image/gwent/assets/card/banner/low/provision_icon.png");
-                urls.add("https://gwent.one/image/gwent/assets/card/banner/low/provision_"+card.getAttributeFaction().replace(" ", "_").toLowerCase()+".png");
-                urls.add("https://gwent.one/image/gwent/assets/card/number/low/provision_" + card.getAttributeProvision() + ".png");
+                urls.add(GC_ART_PROVISION_ICON);
+                urls.add(GC_ART_PROVISION_ATTRIBUTE +card.getAttributeFaction().replace(" ", "_").toLowerCase()+".png");
+                urls.add(GC_ART_PROVISION_NUMBER + card.getAttributeProvision() + ".png");
             }
-            urls.add("https://gwent.one/image/gwent/assets/card/banner/low/default_" + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
-            urls.add("https://gwent.one/image/gwent/assets/card/other/low/trinket_"+ card.getAttributeType().toLowerCase() +".png");
-            urls.add("https://gwent.one/image/gwent/assets/card/other/low/rarity_" + card.getAttributeRarity().toLowerCase() + ".png");
+            urls.add(GC_ART_BANNER + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
+            urls.add(GC_ART_TRINKET + card.getAttributeType().toLowerCase() +".png");
+            urls.add(GC_ART_RARITY + card.getAttributeRarity().toLowerCase() + ".png");
         } else {
-            urls.add("https://gwent.one/image/gwent/assets/card/art/low/" + card.getArtId() + ".jpg");
-            urls.add("https://gwent.one/image/gwent/assets/card/other/low/border_" + card.getAttributeColor().toLowerCase() + ".png");
-            urls.add("https://gwent.one/image/gwent/assets/card/banner/low/ability_" + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
-            urls.add("https://gwent.one/image/gwent/assets/card/other/low/ability_crown.png");
-            urls.add("https://gwent.one/image/gwent/assets/card/other/low/ability_provision.png");
-            urls.add("https://gwent.one/image/gwent/assets/card/number/low/ability_" + card.getAttributeProvision() + ".png");
-            urls.add("https://gwent.one/image/gwent/assets/card/other/low/rarity_" + card.getAttributeRarity().toLowerCase() + ".png");
+            urls.add(GC_ART_LOW + card.getArtId() + ".jpg");
+            urls.add(GC_ART_BORDER + card.getAttributeColor().toLowerCase() + ".png");
+            urls.add(GC_ART_BANNER_ABILITY + card.getAttributeFaction().replace(" ", "_").toLowerCase() + ".png");
+            urls.add(GC_ART_CROWN);
+            urls.add(GC_ART_ABILITY_PROVISION);
+            urls.add(GC_ART_ABILITY_NUMBER + card.getAttributeProvision() + ".png");
+            urls.add(GC_ART_RARITY + card.getAttributeRarity().toLowerCase() + ".png");
         }
         return urls;
     }
