@@ -15,6 +15,7 @@ Begründung:
 
 
 Alternativen:
+
 - https://www.playgwent.com/de/decks/builder/create-new/factions-and-abilities
 - Das Steamspiel Gwent
 

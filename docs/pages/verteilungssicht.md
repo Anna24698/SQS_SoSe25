@@ -10,6 +10,7 @@ Der momentane Stand kann allerdings mit Docker im Localhost ausprobiert werden.
 Der Befehl 
 ``docker compose up --build``
 startet zwei Container:
+
 - GwentApp: Hier befindet sich das Frontend und Backend
 - MariaDB: Hier befindet sich die Datenbank
 

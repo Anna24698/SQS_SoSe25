@@ -7,10 +7,11 @@ Zur Sicherung der Endpunkte wurde Spring Security eingebaut und konfiguriert
 ## User Interface
 
 Die Benutzeroberflächen wurden mit einer Kombination aus den folgenden Technologien erstellt:
+
 - Thymeleaf
 - .html Code
 - .js Code
-- CSS Code
+- CSS-Code
 - Bootstrap
 
 HTML-Code, CSS-Code und Bootstrap sind für das Aussehen der Oberflächen verantwortlich.
@@ -28,6 +29,6 @@ Java-Script-Code ist für die funktionalität in der Oberfläche selbst und das 
 
 - e2e-Tests: Playwright
 
-- Penetrations-Tests: mit spring-security-test 
+- Penetrations-Tests: spring-security-test 
 
 - Codeanalyse: Testabdeckung mit JaCoCo

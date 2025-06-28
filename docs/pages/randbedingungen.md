@@ -6,6 +6,7 @@ Programmiersprache: Java
 Version: 21
 
 Frameworks:
+
 - Spring Boot 3.4.4
 - Spring Boot Starter Web, Security, Actuator, Data JPA
 - Thymeleaf für serverseitiges Rendering von Web-Views
