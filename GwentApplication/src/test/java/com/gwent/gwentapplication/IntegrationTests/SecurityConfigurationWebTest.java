@@ -21,13 +21,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-//@WebMvcTest(controllers = {GwentCardsController.class, UserController.class})
-//        @Import(SecurityConfiguration.class)
 
 @SpringBootTest (classes = GwentApplication.class)
 @AutoConfigureMockMvc
-//@ContextConfiguration(classes = GwentApplication.class)
-//@SpringBootTest(classes = SecurityConfiguration.class)
 @ActiveProfiles("ci")
 
 public class SecurityConfigurationWebTest {
