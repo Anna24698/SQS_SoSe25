@@ -5,7 +5,7 @@
 Die App ist momentan nur halb entwickelt und hat noch nicht viele Funktionalitäten.
 Der momentane Stand kann allerdings mit Docker im Localhost ausprobiert werden.
 
-## Übersicht Dcoker Compose
+## Übersicht Docker Compose
 
 Der Befehl 
 ``docker compose up --build``
