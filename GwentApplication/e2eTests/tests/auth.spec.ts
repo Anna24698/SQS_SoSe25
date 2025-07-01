@@ -5,11 +5,11 @@ test('Registrieren funktioniert', async ({ page }) => {
 
     await page.fill('input[name="username"]', 'testuser');
     await page.fill('input[name="password"]', 'geheim123');
-  //  await page.fill('input[name="confirmPassword"]', 'geheim123');
+
 
     await page.click('button[type="submit"]');
 
-    // z.B. Weiterleitung oder Erfolgsmeldung prüfen
+    // Weiterleitung prüfen
     await expect(page).toHaveURL('/auth/login');
 });
 
@@ -22,7 +22,7 @@ test('Login funktioniert', async ({ page }) => {
     await page.fill('input[name="password"]', 'geheim123');
     await page.click('button[type="submit"]');
 
-    // Erwartung: Umleitung zur Startseite
+    // Erwartung: Umleitung zum Deckbauen
     await expect(page).toHaveURL('/buildDeck');
     await expect(page.locator('text=Logout')).toBeVisible();
 });

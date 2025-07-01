@@ -55,10 +55,6 @@ test('Deck mit Anführer speichern', async ({ page }) => {
     await page.getByRole('button', { name: 'Anführer auswählen' }).click();
     await page.locator('div:nth-child(263) > .img-thumbnail').click();
     await page.locator('div:nth-child(261) > .img-thumbnail').click();
-    /*page.once('dialog', dialog => {
-        console.log(`Dialog message: ${dialog.message()}`);
-        dialog.dismiss().catch(() => {});
-    });*/
     await page.getByRole('button', { name: 'Deck speichern' }).click();
 
 

@@ -21,7 +21,7 @@ Security: Spring Security 6
 
 Templating: Thymeleaf + Spring Security
 
-
+End-to-End-Tests: Playwright
 
 Persistence-Layer: JPA (Hibernate), MariaDB 
 
