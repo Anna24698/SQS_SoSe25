@@ -5,7 +5,7 @@
 
 ![Baustein_ebene_1.png](bilder%2FBaustein_ebene_1.png)
 
-[Baustein_ebene_1.drawio.xml](..%2FXML-Code%2FBaustein_ebene_1.drawio.xml)
+[XML-Code](XML-Code%2FBaustein_ebene_1.drawio.xml)
 
 Der Browser nimmt Requests des Benutzers entgegen und gibt diese Requests an den 
 Backend-Server weiter. Der Backend-Server verarbeitet die Requests und sorgt für die 
@@ -17,7 +17,7 @@ API.
 
 ![Baustein_ebene_3.png](bilder%2FBaustein_ebene_3.png)
 
-[Baustein_ebene_3.drawio.xml](..%2FXML-Code%2FBaustein_ebene_3.drawio.xml)
+[XML-Code](XML-Code%2FBaustein_ebene_3.drawio.xml)
 
 Der Browser nimmt Requests des Benutzers an. Zur Authentifizierung werden die Endpunkte des 
 UserControllers verwendet. Dieser holt sich die relevanten Benutzerdaten aus den entsprechenden

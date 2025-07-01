@@ -4,7 +4,7 @@
 
 ![Kontextdiagramm.png](bilder%2FKontextdiagramm.png)
 
-[XML-Code](..%2FXML-Code%2FKontextdiagramm.drawio.xml)
+[XML-Code](XML-Code%2FKontextdiagramm.drawio.xml)
 
 ## Schnittstellen
 
