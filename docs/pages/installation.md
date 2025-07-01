@@ -31,3 +31,5 @@
     ```sh
     docker compose up --build
     ```
+   
+Die App kann im Browser unter ``http://localhost:8080/buildDeck`` aufgerufen werden
